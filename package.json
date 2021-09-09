@@ -1,0 +1,17 @@
+{
+  "name": "8-0-events-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=5000 .",
+    "test": "./node_modules/.bin/cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "live-server": "^1.2.1"
+  }
+}
