@@ -7,7 +7,6 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
-
 //creating event listener to change color palette
 const palette = document.querySelector("#palette");
 palette.addEventListener("click", (event) => {
@@ -38,9 +37,10 @@ palette.addEventListener("click", (event) => {
       break;
   }
 });
+let mouseDown = false;
 
-//creating event listener to change pixel of canvas
-const canvas = document.querySelector("#canvas");
-canvas.addEventListener("click", (event) => {
-  event.target.style.background = document.querySelector("#current-color").style.background;
+document.querySelectorAll(".cell").forEach((el) => {
+  el.addEventListener("dragover", (event) => {
+    event.target.style.background = document.querySelector("#current-color").style.background;
+  });
 });
