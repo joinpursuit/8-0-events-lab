@@ -38,3 +38,9 @@ palette.addEventListener("click", (event) => {
       break;
   }
 });
+
+//creating event listener to change pixel of canvas
+const canvas = document.querySelector("#canvas");
+canvas.addEventListener("click", (event) => {
+  event.target.style.background = document.querySelector("#current-color").style.background;
+});
