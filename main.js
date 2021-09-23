@@ -40,7 +40,7 @@ palette.addEventListener("click", (event) => {
 let mouseDown = false;
 
 document.querySelectorAll(".cell").forEach((el) => {
-  el.addEventListener("dragover", (event) => {
+  el.addEventListener("click", (event) => {
     event.target.style.background = document.querySelector("#current-color").style.background;
   });
 });
