@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 html,
 body {
@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
 }
 
 header {
@@ -28,7 +28,8 @@ header h1 {
 #canvas {
   border: 3px solid #393e41;
   display: grid;
-  grid-template-columns: repeat(10, 50px);
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
   height: 500px;
   margin: 0 auto;
   width: 500px;
@@ -39,8 +40,8 @@ header h1 {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  height: 50px;
-  width: 50px;
+  height: 1fr;
+  width: 1fr;
 }
 
 #current-color {
