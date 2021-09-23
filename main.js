@@ -6,6 +6,8 @@ for (let i = 0; i < 100; i++) {
   main.append(div);
 }
 
+document.querySelector("#palette").after(document.createElement("button"));
+buttonEl = document.querySelector("button");
 // You may write your code here!
 //creating event listener to change color palette
 const palette = document.querySelector("#palette");
@@ -37,10 +39,17 @@ palette.addEventListener("click", (event) => {
       break;
   }
 });
-let mouseDown = false;
 
 document.querySelectorAll(".cell").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.target.style.background = document.querySelector("#current-color").style.background;
+  });
+});
+
+buttonEl.addEventListener("click", () => {
+  const currentColor = document.querySelector("#current-color").style.background;
+  //iterate through cells to change color
+  document.querySelectorAll(".cell").forEach((el) => {
+    el.style.background = currentColor;
   });
 });
