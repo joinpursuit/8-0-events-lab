@@ -13,9 +13,12 @@ document.querySelectorAll('div').forEach(div => {
 
   //listen for click on any div
   div.addEventListener('click', () => {
+    //declare variable `brush` = document.querySelector('#current-color')
+    const brush = document.querySelector('#current-color')
+
     //Check if div is palette or canvas
     //---->if palette, #current-color.style.background = div.style.background : div.style.background = #current-color.style.background
-    div.className === 'cell' ? div.style.background = document.querySelector('#current-color').style.background : document.querySelector('#current-color').style.background = div.style.background
+    div.className === 'cell' ? div.style.background = brush.style.background : brush.style.background = div.style.background
 
   })
 
