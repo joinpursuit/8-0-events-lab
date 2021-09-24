@@ -14,19 +14,47 @@ document.querySelector("#canvas").style.gridTemplateRows = `repeat(${size}, ${
 }px)`;
 // You may write your code here!
 const currentColor = document.querySelector("#current-color");
+
+//specific color element
+const colorPicker = document.createElement("div");
+colorPicker.classList.add("color");
+colorPicker.style.background = "white";
+colorPicker.textContent = "custom";
+colorPicker.addEventListener("input", () => {
+  colorPicker.style.color = colorPicker;
+});
+const colorId = document.createElement("input");
+colorId.type = "color";
+colorId.addEventListener("input", () => {
+  colorPicker.style.background = colorId.value;
+  currentColor.style.background = colorId.value;
+});
+colorPicker.append(colorId);
+document.querySelector("#palette").append(colorPicker);
+
+//assigning color event
 const colors = document.querySelectorAll(".color");
 colors.forEach((color) => {
   color.addEventListener("click", () => {
+    console.log("clicked");
     currentColor.style.background = `${color.style.background}`;
   });
 });
-
 const cells = document.querySelectorAll(".cell");
+//basic click to change
 cells.forEach((cell) => {
   cell.addEventListener("click", (event) => {
     cell.style.background = `${currentColor.style.background}`;
   });
 });
+
+//experimental drag
+// cells.forEach((cell) => {
+//   cell.addEventListener("mousedown", (event) => {
+//     cell.style.background = `${currentColor.style.background}`;
+//   });
+// });
+
 //resetButton
 const resetButton = document.createElement("button");
 resetButton.innerHTML = "reset";
