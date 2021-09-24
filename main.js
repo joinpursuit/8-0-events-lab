@@ -47,3 +47,17 @@ resetButton.addEventListener("click", () => {
     cell.style.background = colors[colors.length - 1].style.background;
   });
 });
+
+const colorAllButton = document.createElement("button");
+colorAllButton.textContent = "Click to Color All!";
+colorAllButton.setAttribute("type", "submit");
+buttonSection.append(colorAllButton);
+
+colorAllButton.addEventListener("click", () => {
+  cells.forEach((cell) => {
+    cell.style.background = currentColor.style.background;
+  });
+});
+
+buttonSection.style.margin = "25px auto";
+buttonSection.style.textAlign = "center";
