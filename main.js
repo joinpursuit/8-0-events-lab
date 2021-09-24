@@ -26,3 +26,13 @@ paletteColorSection.forEach((palet) => {
   });
 });
 
+// Selecting a list of DOM elements (HTMLCollection) from main tags  having cell class
+const mainCells = document.querySelectorAll('main .cell');
+mainCells.forEach((cell) => {
+    //Calling event listener on each DOM element
+  cell.addEventListener('click', (event) => {
+    event.target.style.backgroundColor =  currentColor.style.backgroundColor; 
+  });
+
+});
+
