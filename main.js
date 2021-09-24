@@ -24,3 +24,26 @@ cells.forEach((cell) => {
     cell.style.background = currentColor.style.background;
   });
 });
+
+//extra features
+
+cells.forEach((cell) => {
+  cell.addEventListener("mousedown", () => {
+    cell.style.background = currentColor.style.background;
+  });
+});
+
+const body = document.querySelector("body");
+const buttonSection = document.createElement("section");
+body.append(buttonSection);
+
+const resetButton = document.createElement("button");
+resetButton.textContent = "Click to Reset!";
+resetButton.setAttribute("type", "submit");
+buttonSection.append(resetButton);
+
+resetButton.addEventListener("click", () => {
+  cells.forEach((cell) => {
+    cell.style.background = colors[colors.length - 1].style.background;
+  });
+});
