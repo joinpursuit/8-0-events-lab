@@ -18,5 +18,6 @@ document.querySelectorAll("div").forEach((div) => {
   div.addEventListener("click", () => {
     const dye = document.querySelector("#current-color");
     div.className == "cell"
+    ? (div.style.background = dye.style.background)
   });
 });
