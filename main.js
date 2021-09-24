@@ -8,25 +8,21 @@ for (let i = 0; i < 100; i++) {
 
 // You may write your code here!
 
-//listen for click on color palette and change #current-color
+//query all div
+document.querySelectorAll('div').forEach(div => {
 
-let brush = document.querySelector('#palette div').style.background
+  //listen for click on any div
+  div.addEventListener('click', () => {
+    //Check if div is palette or canvas
+    //---->if palette, #current-color.style.background = div.style.background : div.style.background = #current-color.style.background
+    div.className === 'cell' ? div.style.background = document.querySelector('#current-color').style.background : document.querySelector('#current-color').style.background = div.style.background
 
-document.querySelectorAll("#palette div").forEach( currentColor => {
-  currentColor.addEventListener('click', paletteColor =>{
-    
-    document.querySelector("#current-color").style.background = paletteColor.target.style.background;
-
-    brush = paletteColor.target.style.background
-  })  
-});
-
-
-
-document.querySelectorAll('div.cell').forEach( cell => {
-  cell.addEventListener('click', () => {
-    cell.style.background = brush
-    
   })
+
 })
+
+
+
+
+
 
