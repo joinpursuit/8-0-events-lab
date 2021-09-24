@@ -7,3 +7,18 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+// const currentColor = document.querySelector("#current-color");
+// const palettes = document.querySelectorAll("#palette .color");
+// for(let palette of palettes){
+
+// }
+
+document.querySelectorAll("div").forEach((div) => {
+  div.addEventListener("click", () => {
+    const dye = document.querySelector("#current-color");
+    div.className == "cell"
+      ? (div.style.background = dye.style.background)
+      : (dye.style.background = div.style.background);
+  });
+});
