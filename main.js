@@ -16,3 +16,11 @@ colors.forEach((color) => {
     currentColor.style.background = color.style.background;
   });
 });
+
+const cells = document.querySelectorAll(".cell");
+
+cells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.style.background = currentColor.style.background;
+  });
+});
