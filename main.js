@@ -7,3 +7,14 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+document.querySelectorAll('div').forEach(div => {
+div.addEventListener('click', () => {
+const paint = document.querySelector('#current-color')
+  if (div.className === 'cell'){
+    div.style.background = paint.style.background
+    } else {
+      paint.style.background = div.style.background
+    }
+  })
+})
