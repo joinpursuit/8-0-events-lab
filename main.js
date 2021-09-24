@@ -1,6 +1,7 @@
 // Do not change the code below.
 const main = document.querySelector("main");
-let size = 25;
+let size = Number(prompt("enter desired grid size"));
+console.log(size);
 for (let i = 0; i < size * size; i++) {
   const div = document.createElement("div");
   div.classList.add("cell");
