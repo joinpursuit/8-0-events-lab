@@ -17,8 +17,5 @@ for (let i = 0; i < 100; i++) {
 document.querySelectorAll("div").forEach((div) => {
   div.addEventListener("click", () => {
     const dye = document.querySelector("#current-color");
-    div.className == "cell"
-      ? (div.style.background = dye.style.background)
-      : (dye.style.background = div.style.background);
   });
 });
