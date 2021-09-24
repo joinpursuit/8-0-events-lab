@@ -7,3 +7,9 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+// Selecting a DOM element having the class current-color
+ let currentColor = document.querySelector('#current-color');
+
+ // Setting default  value to currentColor
+ currentColor.style.backgroundColor = '#000000';
