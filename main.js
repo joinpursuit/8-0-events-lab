@@ -7,3 +7,21 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+const currentColor = document.querySelector("#current-color");
+const colors = document.querySelectorAll("div.color");
+
+// > for of loop
+// for (const color of colors) {
+//   color.addEventListener("click", () => {
+//     currentColor.style.background = color.style.background
+//   });
+// };
+
+colors.forEach((color) => {
+  color.addEventListener("click", () => {
+    currentColor.style.background = color.style.background
+  });
+});
+
+
