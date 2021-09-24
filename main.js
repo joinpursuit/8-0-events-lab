@@ -14,7 +14,14 @@ let typeColor;
 for (let color of allColors) {
   color.addEventListener("click", (event) => {
     typeColor = event.target.style.background;
+    currentColor.setAttribute("style", `background-color: ${typeColor}`);
+  });
+}
+typeColor = currentColor.style.background.color;
+const cells = document.querySelectorAll(".cell");
+for (let cell of cells) {
+  cell.addEventListener("click", (event) => {
     console.log(typeColor);
-    currentColor.setAttribute("style", "background-color: ${typeColor}");
+    cell.setAttribute("style", `background-color: ${typeColor}`);
   });
 }
