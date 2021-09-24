@@ -1,1 +1,5 @@
-{}
+{
+  "cypress-watch-and-reload": {
+    "watch": ["index.html", "main.js", "style.css"]
+  }
+}
