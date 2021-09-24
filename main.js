@@ -10,7 +10,7 @@ for (let i = 0; i < 100; i++) {
 const colors = document.querySelectorAll('.color');
 //Variable created for section id current color
 const currColor = document.querySelector('#current-color');
-//Loop thru colors array 
+//Loop thru all the colors 
 colors.forEach((color) => {
   //If a color is clicked
   color.addEventListener('click', () => {
@@ -18,5 +18,14 @@ colors.forEach((color) => {
     currColor.style.background = color.style.background;
   });
 });
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach((cell) => {
+  cell.addEventListener('click', () => {
+    cell.style.background = currColor.style.background;
+  });
+});
+
 
 
