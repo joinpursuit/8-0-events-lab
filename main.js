@@ -7,3 +7,24 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+// create an array of all the colors
+const allColors = document.querySelectorAll(".color");
+const currentColor = document.querySelector("#current-color");
+
+// display current color by adding an attribute, style, to match the background color chosen from the palette
+allColors.forEach((color) => {
+  color.addEventListener("click", () => {
+    currentColor.setAttribute("style", `background: ${color.style.background}`);
+  });
+});
+
+// pixel canvas
+const cells = document.querySelectorAll(".cell");
+
+// display color in the cells by adding an attribute, style, to match the background color of current color
+cells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.setAttribute("style", `background: ${currentColor.style.background}`);
+  });
+});
