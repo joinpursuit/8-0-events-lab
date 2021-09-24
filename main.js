@@ -7,16 +7,26 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
-// const colors = document.querySelectorAll('#palette');
-// colors.forEach('click', (event) => {
-//   const currentColor = event.target.querySelector('#current-color')
-// })
+
+//declare var to access color palette
 const colors = document.querySelectorAll(".color");
+//declare var for current color
+const currColor = document.querySelector("#current-color");
 
-const currentColor = document.querySelector("#current-color");
-
+//loop through color palette
 colors.forEach((color) => {
+  //for each color that is clicked on change currColor to that color
   color.addEventListener("click", () => {
-    currentColor.style.background = color.style.background;
+    currColor.style.background = color.style.background;
+  });
+});
+
+//declare var to access all cells
+const cells = document.querySelectorAll(".cell");
+//loop through all cells
+cells.forEach((cell) => {
+  //for each cell that is clicked on change color to currColor
+  cell.addEventListener("click", () => {
+    cell.style.background = currColor.style.background;
   });
 });
