@@ -6,11 +6,13 @@ for (let i = 0; i < 100; i++) {
   main.append(div);
 }
 
-document.querySelectorAll("div").forEach(div => {
- div.addEventListener("click", () =>{
-  const dye = document.querySelector("#current-color")
-  div.className == "cell" ? div.style.background = dye.style.background : dye.style.background = div.style.background;
- })
+document.querySelectorAll("div").forEach((div) => {
+  div.addEventListener("click", () => {
+    const dye = document.querySelector("#current-color");
+    div.className == "cell"
+      ? (div.style.background = dye.style.background)
+      : (dye.style.background = div.style.background);
+  });
 });
 
 /**
