@@ -7,3 +7,23 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+let currentColor=document.querySelector("#current-color");
+let allPalettes=document.querySelectorAll(".color");
+for(let div of allPalettes) {
+  div.addEventListener("click", e => {
+    currentColor.style.backgroundColor= e.target.style.backgroundColor;
+  })
+}
+let currentColor2=document.querySelector("#current-color");
+let cells=document.querySelectorAll(".cell");
+for(let cell of cells){
+  cell.addEventListener("click", e => {
+    e.target.style.backgroundColor=currentColor2.style.backgroundColor;
+  })
+}
+// for(let cell of cells) {
+//   cell.style.width="25px";
+//   cell.style.height="25px";
+//   cell.style.margin= 0;
+// }
