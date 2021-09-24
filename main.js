@@ -8,6 +8,7 @@ for (let i = 0; i < 100; i++) {
 
 // You may write your code here!
 
+
 const currentColor = document.querySelector("#current-color");
 const colors = document.querySelectorAll("div.color");
 
@@ -24,4 +25,16 @@ colors.forEach((color) => {
   });
 });
 
+const cells = document.querySelectorAll("div.cell");
 
+// > for of loop
+// for (const cell of cells) {
+//   cell.addEventListener("click", () => {
+//   cell.style.background = currentColor.style.background});
+// };
+
+cells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.style.background = currentColor.style.background
+  }); 
+});
