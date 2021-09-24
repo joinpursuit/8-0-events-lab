@@ -7,3 +7,14 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+//creating event listener to change color palette
+const palette = document.querySelectorAll("#palette");
+
+palette.forEach((eachColor) => {
+  eachColor.addEventListener('click', (event) => {
+    document.querySelector('#current-color').style.background = event.target.style.background
+  })
+})
+
+
+  
