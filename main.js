@@ -5,5 +5,18 @@ for (let i = 0; i < 100; i++) {
   div.classList.add("cell");
   main.append(div);
 }
-
 // You may write your code here!
+//Variable created to catch all the colors, using the div class attribute
+const colors = document.querySelectorAll('.color');
+//Variable created for section id current color
+const currColor = document.querySelector('#current-color');
+//Loop thru colors array 
+colors.forEach((color) => {
+  //If a color is clicked
+  color.addEventListener('click', () => {
+    //the current color is now the color clicked
+    currColor.style.background = color.style.background;
+  });
+});
+
+
