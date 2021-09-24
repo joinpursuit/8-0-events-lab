@@ -13,3 +13,16 @@ for (let i = 0; i < 100; i++) {
 
  // Setting default  value to currentColor
  currentColor.style.backgroundColor = '#000000';
+
+
+
+// Selecting a list of DOM elements (HTMLCollection) from div tags having palette class
+const paletteColorSection = document.querySelectorAll('#palette div');
+paletteColorSection.forEach((palet) => {
+
+  //Calling event listener on each DOM element
+  palet.addEventListener('click', (event) => {
+    currentColor.style.backgroundColor = event.target.style.backgroundColor;
+  });
+});
+
