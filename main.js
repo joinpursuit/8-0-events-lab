@@ -50,3 +50,14 @@ document.querySelector("#canvas").append(resetButton);
 resetButton.addEventListener("click", () => {
   cells.forEach((cell) => (cell.style.background = "none"));
 });
+
+//Created variable for second button in another new div
+const anotherButton = document.createElement("div");
+//add text to button
+anotherButton.textContent = `change 🖌️ `;
+//add button to canvas
+document.querySelector("#canvas").append(anotherButton);
+//add functionality
+anotherButton.addEventListener("click", () => {
+  cells.forEach((cell) => (cell.style.background = currColor.style.background));
+});
