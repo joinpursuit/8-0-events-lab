@@ -36,7 +36,7 @@ mainCells.forEach((cell) => {
 });
 
 
-const button = document.querySelector('.btn')
+const btnReset = document.querySelector('.btn')
 const resetButton = () =>{
   // for ( let i = 0; i < mainCells.length; i++){
   //   const cell = mainCells[i];
@@ -47,4 +47,15 @@ const resetButton = () =>{
 
 }
 
-button.addEventListener('click', resetButton)
+btnReset.addEventListener('click', resetButton)
+
+
+const btnColorMatch = document.querySelector('.btn-current')
+const colorMatch = () =>{
+
+  const eachCell = (cell) => cell.style.backgroundColor = currentColor.style.backgroundColor;
+  mainCells.forEach(eachCell)
+
+}
+
+btnColorMatch.addEventListener('click', colorMatch)
