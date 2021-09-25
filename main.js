@@ -40,15 +40,30 @@ function colorBlock() {
 
   //remember that query selector!!! Select of ID of color block button I created. 
 
-  for (let color of availableColors) {
-    //here I can apply the event listener to my selected button
-    colorBlockBtn.addEventListener("click", (event) => {
-prompt("pick which color you want!")
-      accessEntire.style.backgroundColor = event.target.style.backgroundColor
 
-    });
-  }
+  //here I can apply the event listener to my selected button
+  colorBlockBtn.addEventListener("click", (event) => {
+    for (let color of availableColors) {
+      color.addEventListener("click", (event) => {
+        accessEntire.style.backgroundColor = event.target.style.backgroundColor
+      });
+    }
+  });
 }
+
+//colorBlock PsuedoCode
+
+/* For this function I want:
+1. User to be able to click on the button
+2. After button is clicked, they are prompted to click a color (but not take an input directly into prompt just be instructed)
+3. Once a color is clicked the entire palette blocks out the color (hint I have already created this sucessfully)
+
+
+*/
+
+
+
+
 
 
 colorSelection()
