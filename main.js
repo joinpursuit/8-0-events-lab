@@ -30,3 +30,14 @@ cells.forEach((cell) => {
     cell.style.background = currColor.style.background;
   });
 });
+
+//create button
+const resetButton = document.createElement("div");
+//add text to button
+resetButton.textContent = `🔄`;
+//add button
+document.querySelector("#canvas").append(resetButton);
+//add functionality
+resetButton.addEventListener("click", () => {
+  cells.forEach((cell) => (cell.style.background = "none"));
+});
