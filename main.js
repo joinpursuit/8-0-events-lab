@@ -25,9 +25,9 @@ const toggleActive = () => canvas.classList.toggle('active');
 
 //click and drag to draw
 allCells.forEach(cell =>{
-  cell.addEventListener('mousedown', toggleActive)
+  addEventListener('mousedown', toggleActive)
   
-  cell.addEventListener('mouseup', toggleActive)
+  addEventListener('mouseup', toggleActive)
 
   cell.addEventListener('mouseover', () => {
     if(canvas.className === 'active'){
