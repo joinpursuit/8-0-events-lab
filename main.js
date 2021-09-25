@@ -67,17 +67,29 @@ for (let cell of cells) {
 }
 
 /*
+MAKE CONTAINER FOR BUTTONS
+*/
+// CONTAINER - for all buttons
+let emptyContainer = document.createElement("div");
+emptyContainer.setAttribute("class", "button-container");
+// add to body
+main.before(emptyContainer);
+
+// select button-container where buttons will be stored
+let buttonContainer = document.querySelector(".button-container");
+
+/*
 MAKE BUTTON #1 - Clears all colors from canvas
 */
 // create `clearButton` button
 let clearButton = document.createElement('div');
 // set attributes to element
 clearButton.setAttribute("class", "clear-button");
-clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:block; margin-left: auto; margin-right: auto; margin-bottom:20px;");
+clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
 clearButton.textContent = "Clear The Canvas";
 
 // add to body
-main.before(clearButton);
+buttonContainer.append(clearButton);
 
 // add event listener for button - clears canvas
 clearButton.addEventListener("click", ()=>{
@@ -94,11 +106,12 @@ MAKE BUTTON #2 - Makes canvas all Current Color
 let oneColor = document.createElement('div');
 // set attributes to element
 oneColor.setAttribute("class", "one-button");
-oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:block; margin-left: auto; margin-right: auto; margin-bottom:20px;");
-oneColor.textContent = "One Color Canvas";
+oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
+oneColor.textContent =
+`One Color Canvas (your current color)`;
 
 // add to body
-main.before(oneColor);
+buttonContainer.append(oneColor);
 
 // add event listener for button - makes canvas all current color
 oneColor.addEventListener("click", ()=>{
