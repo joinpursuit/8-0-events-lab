@@ -80,3 +80,4 @@ function colorBlock() {
 
 colorSelection()
 cellBlock()
+colorBlock()
