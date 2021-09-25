@@ -4,6 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: tan;
 }
 
 h1,
@@ -16,7 +17,7 @@ h6 {
 }
 
 header {
-  background: #7e7f9a;
+  background: #5c8479;
   color: white;
 }
 
@@ -66,4 +67,12 @@ header h1 {
   margin: 10px;
   height: 50px;
   width: 50px;
+}
+
+#start-over {
+  position:relative;
+  text-align: center;
+  background-color: rgb(181, 180, 197);
+  color: white;
+  margin: 1em 30em 1em 30em
 }

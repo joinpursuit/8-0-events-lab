@@ -19,7 +19,17 @@ for (let i = 0; i < 100; i++) {
 };
 
     for(let cell of cells){
-      cell.addEventListener("click", (event) =>{
+      cell.addEventListener("mouseover", (event) =>{
         event.target.style.backgroundColor = currentColors.style.backgroundColor;
     });
 };
+
+    // Added Start button that relads the page after
+    const startOver = document.querySelectorAll("#start-over");
+
+      for(let startbtn of startOver){
+        startbtn.addEventListener("click", (event) =>{
+          event.target.setAttribute("style", "background-color: green")
+          window.location.reload();
+        });
+      }
