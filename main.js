@@ -8,10 +8,10 @@ for (let i = 0; i < 100; i++) {
 // You may write your code here!
 
 // Selecting a DOM element having the class current-color
- let currentColor = document.querySelector('#current-color');
+let currentColor = document.querySelector('#current-color');
 
- // Setting default  value to currentColor
- currentColor.style.backgroundColor = 'white';
+// Setting default  value to currentColor
+currentColor.style.backgroundColor = 'black';
 
 // Selecting a list of DOM elements (HTMLCollection) from div tags having palette class
 const paletteColorSection = document.querySelectorAll('#palette div');
@@ -26,18 +26,18 @@ paletteColorSection.forEach((palet) => {
 // Selecting a list of DOM elements (HTMLCollection) from main tags  having cell class
 const mainCells = document.querySelectorAll('main .cell');
 mainCells.forEach((cell) => {
-    //Calling event listener on each DOM element
+  //Calling event listener on each DOM element
   cell.addEventListener('mouseover', (event) => {
 
-//console.log(event.target)    
-    event.target.style.backgroundColor =  currentColor.style.backgroundColor; 
+    //console.log(event.target)    
+    event.target.style.backgroundColor = currentColor.style.backgroundColor;
   });
 
 });
 
 
 const btnReset = document.querySelector('.btn')
-const resetButton = () =>{
+const resetButton = () => {
   // for ( let i = 0; i < mainCells.length; i++){
   //   const cell = mainCells[i];
   //   cell.style.backgroundColor = '#ffffff';
@@ -51,7 +51,7 @@ btnReset.addEventListener('click', resetButton)
 
 
 const btnColorMatch = document.querySelector('.btn-current')
-const colorMatch = () =>{
+const colorMatch = () => {
 
   const eachCell = (cell) => cell.style.backgroundColor = currentColor.style.backgroundColor;
   mainCells.forEach(eachCell)
