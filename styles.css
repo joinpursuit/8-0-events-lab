@@ -67,3 +67,14 @@ header h1 {
   height: 50px;
   width: 50px;
 }
+
+.btn {
+  margin-right:25px;
+  float: right;
+  background-color: rgb(166, 240, 18);
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  border-radius:25px;
+ 
+}

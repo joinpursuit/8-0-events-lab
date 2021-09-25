@@ -5,16 +5,13 @@ for (let i = 0; i < 100; i++) {
   div.classList.add("cell");
   main.append(div);
 }
-
 // You may write your code here!
 
 // Selecting a DOM element having the class current-color
  let currentColor = document.querySelector('#current-color');
 
  // Setting default  value to currentColor
- currentColor.style.backgroundColor = '#000000';
-
-
+ currentColor.style.backgroundColor = 'white';
 
 // Selecting a list of DOM elements (HTMLCollection) from div tags having palette class
 const paletteColorSection = document.querySelectorAll('#palette div');
@@ -30,9 +27,24 @@ paletteColorSection.forEach((palet) => {
 const mainCells = document.querySelectorAll('main .cell');
 mainCells.forEach((cell) => {
     //Calling event listener on each DOM element
-  cell.addEventListener('click', (event) => {
+  cell.addEventListener('mouseover', (event) => {
+
+//console.log(event.target)    
     event.target.style.backgroundColor =  currentColor.style.backgroundColor; 
   });
 
 });
 
+
+const button = document.querySelector('.btn')
+const resetButton = () =>{
+  // for ( let i = 0; i < mainCells.length; i++){
+  //   const cell = mainCells[i];
+  //   cell.style.backgroundColor = '#ffffff';
+  // }
+  const eachCell = (cell) => cell.style.backgroundColor = '#ffffff';
+  mainCells.forEach(eachCell)
+
+}
+
+button.addEventListener('click', resetButton)
