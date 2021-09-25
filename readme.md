@@ -36,9 +36,9 @@ This will open the Cypress testing window, where you can click to run an individ
 
 To get the tests to pass for this lab, you will need to complete the following tasks. If you're unclear about any of the instructions below, remember that you can check the test file to see what exactly is being tested.
 
-- [ ] When a color is clicked in the `#palette`, the `#current-color` element should have its background changed to that color. For example, if you click the green circle in the `#palette`, the `#current-color` element's background should change to be green.
+- [ ✅] When a color is clicked in the `#palette`, the `#current-color` element should have its background changed to that color. For example, if you click the green circle in the `#palette`, the `#current-color` element's background should change to be green.
 
-- [ ] When you click on a `.cell`, its background should change to match the background of `#current-color`.
+- [ ✅ ] When you click on a `.cell`, its background should change to match the background of `#current-color`.
 
 ### Tip
 

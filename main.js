@@ -18,13 +18,34 @@ const availableColors = document.querySelectorAll(".color")  //remember to use Q
 
 // Access the CLASS of cell 
 
-const accessCell = document.querySelector(".cell") 
+const accessCell = document.querySelector(".cell")
 
-for (let color of availableColors) {
-  // created a event - and attached it each color of the available colors - this eventListener is listening out for a click action
-  color.addEventListener("click", (event) => {
-    //cuurent colors styling and background color became equal to the even target's style and background color and style
-    currentColor.style.backgroundColor = event.target.style.backgroundColor
-  });
+// Acceess the entire canvas
+
+const accessEntire = document.querySelector("#canvas")
+
+
+function colorSelection() {
+  for (let color of availableColors) {
+    // created a event - and attached it each color of the available colors - this eventListener is listening out for a click action
+    color.addEventListener("click", (event) => {
+      //cuurent colors styling and background color became equal to the even target's style and background color and style
+      currentColor.style.backgroundColor = event.target.style.backgroundColor
+    });
+  }
 }
 
+function colorBlock() {
+  for (let color of availableColors) {
+    color.addEventListener("click", (event) => {
+
+      accessEntire.style.backgroundColor = event.target.style.backgroundColor
+
+    });
+  }
+}
+
+
+colorSelection()
+
+colorBlock()
