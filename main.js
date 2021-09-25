@@ -34,9 +34,6 @@ allCells.forEach(cell =>{
     cell.style.background = currentColorViewer.style.background
     }
   })
-  cell.addEventListener('touchmove', () => {
-    cell.style.background = currentColorViewer.style.background
-  })
   cell.addEventListener('mousedown', () => {
     cell.style.background = currentColorViewer.style.background
   })
