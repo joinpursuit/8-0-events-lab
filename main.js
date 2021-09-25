@@ -1,6 +1,15 @@
 // Do not change the code below.
 const main = document.querySelector("main");
 let size = Number(prompt("enter desired grid size"));
+function numberPrompt(size) {
+  if (Number.isNaN(size)) {
+    size = Number(prompt("Not a number, please enter a number"));
+    return numberPrompt(size);
+  } else {
+    return size;
+  }
+}
+size = numberPrompt(size);
 for (let i = 0; i < size * size; i++) {
   const div = document.createElement("div");
   div.classList.add("cell");
