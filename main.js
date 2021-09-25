@@ -54,7 +54,7 @@ resetButton.addEventListener("click", () => {
 //Created variable for second button in another new div
 const anotherButton = document.createElement("div");
 //add text to button
-anotherButton.textContent = `change 🖌️ `;
+anotherButton.textContent = `🖌️ `;
 //add button to canvas
 document.querySelector("#canvas").append(anotherButton);
 //add functionality
