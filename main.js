@@ -6,6 +6,15 @@ for (let i = 0; i < 100; i++) {
   main.append(div);
 }
 
+//Created new div for new color
+const addColor = document.createElement("div");
+//Added a class of color to new div
+addColor.classList.add("color");
+//Added color to class
+addColor.style.background = "lightblue";
+//Added new color to end of palette of colors
+document.querySelector("#palette").append(addColor);
+
 // You may write your code here!
 
 //declare var to access color palette
@@ -16,7 +25,7 @@ const currColor = document.querySelector("#current-color");
 //loop through color palette
 colors.forEach((color) => {
   //for each color that is clicked on change currColor to that color
-  color.addEventListener("click", () => {
+  color.addEventListener("mousedown", () => {
     currColor.style.background = color.style.background;
   });
 });
