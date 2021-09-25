@@ -66,12 +66,24 @@ for (let cell of cells) {
   })
 }
 
+
+/*
+Add directions of how to play
+*/
+let directions = document.createElement("div");
+directions.textContent = "How to Play: Choose a color below, then paint the pixels!";
+directions.setAttribute("style", "text-align:center;");
+// add to body
+main.before(directions);
+
 /*
 MAKE CONTAINER FOR BUTTONS
 */
 // CONTAINER - for all buttons
 let emptyContainer = document.createElement("div");
 emptyContainer.setAttribute("class", "button-container");
+emptyContainer.setAttribute("style", "text-align:center;");
+
 // add to body
 main.before(emptyContainer);
 
@@ -85,7 +97,7 @@ MAKE BUTTON #1 - Clears all colors from canvas
 let clearButton = document.createElement('div');
 // set attributes to element
 clearButton.setAttribute("class", "clear-button");
-clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
+clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
 clearButton.textContent = "Clear The Canvas";
 
 // add to body
@@ -106,9 +118,9 @@ MAKE BUTTON #2 - Makes canvas all Current Color
 let oneColor = document.createElement('div');
 // set attributes to element
 oneColor.setAttribute("class", "one-button");
-oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
+oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px;");
 oneColor.textContent =
-`One Color Canvas (your current color)`;
+`One Color Canvas`;
 
 // add to body
 buttonContainer.append(oneColor);
