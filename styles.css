@@ -67,3 +67,8 @@ header h1 {
   height: 50px;
   width: 50px;
 }
+
+.darkMode {
+  background-color: black;
+  color: white;
+}

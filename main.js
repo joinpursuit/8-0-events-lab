@@ -1,10 +1,10 @@
 // Do not change the code below.
 const main = document.querySelector("main");
 let size = Number(prompt("enter desired grid size"));
-console.log(size);
 for (let i = 0; i < size * size; i++) {
   const div = document.createElement("div");
   div.classList.add("cell");
+  div.style.background = "white";
   main.append(div);
 }
 document.querySelector(
@@ -15,6 +15,7 @@ document.querySelector("#canvas").style.gridTemplateRows = `repeat(${size}, ${
 }px)`;
 // You may write your code here!
 const currentColor = document.querySelector("#current-color");
+currentColor.style.background = "white";
 
 //specific color element
 const colorPicker = document.createElement("div");
@@ -44,17 +45,10 @@ colors.forEach((color) => {
 const cells = document.querySelectorAll(".cell");
 //basic click to change
 cells.forEach((cell) => {
-  cell.addEventListener("click", (event) => {
+  cell.addEventListener("mousedown", (event) => {
     cell.style.background = `${currentColor.style.background}`;
   });
 });
-
-//experimental drag
-// cells.forEach((cell) => {
-//   cell.addEventListener("mousedown", (event) => {
-//     cell.style.background = `${currentColor.style.background}`;
-//   });
-// });
 
 //resetButton
 const resetButton = document.createElement("button");
@@ -88,3 +82,11 @@ document.querySelector("#palette").append(fillButton);
 //     window.addEventListener("mouseup", endMove);
 //   });
 // }
+
+//Dark mode toggle
+const darkButton = document.createElement("button");
+darkButton.textContent = "Dark Toggle";
+darkButton.onclick = function () {
+  document.querySelector("body").classList.toggle("darkMode");
+};
+document.querySelector("header").after(darkButton);
