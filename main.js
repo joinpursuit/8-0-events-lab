@@ -18,7 +18,7 @@ current.setAttribute("style", "background: null");
 
 for (let color of colors) {
   color.addEventListener("click", () => {
-    console.log("this is your new color");
+    // console.log("this is your new color");
     if (color === colors[0]){
       current.setAttribute("style", "background: black");
     }
@@ -43,5 +43,19 @@ for (let color of colors) {
     if (color === colors[7]){
       current.setAttribute("style", "background: white");
     }
+  })
+}
+
+
+// Add event listener for clicking on a cell
+// select the current cell
+// we want to play with all the `cell` tags, not just 1 `cell` tag
+let cells = document.querySelectorAll(".cell");
+for (let cell of cells) {
+  // what is the currently picked color?
+  let pickedColor = document.querySelector("#current-color");
+
+  cell.addEventListener("click", (e)=>{
+  e.target.style.backgroundColor = pickedColor.style.backgroundColor;
   })
 }
