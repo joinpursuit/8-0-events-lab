@@ -18,7 +18,7 @@ const availableColors = document.querySelectorAll(".color")  //remember to use Q
 
 // Access the CLASS of cell 
 
-const accessCell = document.querySelector(".cell")
+const accessCell = document.querySelectorAll(".cell")
 
 // Acceess the entire canvas
 
@@ -35,6 +35,20 @@ function colorSelection() {
     });
   }
 }
+
+
+function cellBlock() {
+  for (let cell of accessCell) {
+    cell.addEventListener("click", (event) => {
+      //Remember to used QUERYSELECTER ALL!! Target was not working 
+      event.target.style.backgroundColor = currentColor.style.backgroundColor
+    });
+  }
+}
+
+
+
+
 
 function colorBlock() {
 
@@ -67,5 +81,4 @@ function colorBlock() {
 
 
 colorSelection()
-
-colorBlock()
+cellBlock()
