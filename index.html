@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixel Painter</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" /> // connected to styles.css
+    <script defer src="main.js"></script> // defer main.js
   </head>
   <body>
-    <header>
+    <header> // child of body
       <h1>Pixel Painter</h1>
     </header>
-    <main id="canvas"></main>
-    <section id="current-color"></section>
-    <section id="palette">
-      <div class="color" style="background: black"></div>
+    <main id="canvas"></main>// main sibling of header #canvas
+    <section id="current-color"></section>// section sibling of main #current-color . ** The element I need to change when I click #palette colors **
+    <section id="palette"> // second section sibling of main & header #palette 8 div elements set below as children accirdug to .color
+      <div class="color" style="background: black"></div> // target style="background:" of #current-color
       <div class="color" style="background: red"></div>
       <div class="color" style="background: orange"></div>
       <div class="color" style="background: yellow"></div>
