@@ -44,6 +44,21 @@ for(let cell of cells2){
     e.target.style.backgroundColor=currentColor2.style.backgroundColor;
   });
 }
+// Creating reset button
+let button=document.createElement("button");
+button.setAttribute("name", "Reset");
+button.setAttribute("id", "reset-id");
+button.innerText="Reset here";
+button.setAttribute("style", "width: 100px; margin: 25px 500px; text-align: center; border-radius:10px;");
+
+// select body
+let body=document.querySelector("body");
+body.append(button);
+button.addEventListener("click", ()=> {
+  location.reload();
+})
+
+
 
 
 
