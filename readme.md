@@ -51,6 +51,6 @@ Attempt to implement _at least one_ of the following features:
 - [ ] Increase the number of cells without increasing the width or height of the `#canvas` element.
 - [ ] Change the event listener so that instead of clicking to fill a color, you hold down your mouse.
 - [ ] Create a button that, when clicked, resets all cells so that they all have a background of white.
-- [ ] Create a button that, when clicked, changes all of the cells so that they match the `#current-color` element's background.
+- [✅  ] Create a button that, when clicked, changes all of the cells so that they match the `#current-color` element's background.
 
 Feel free to add other fun features to build out your pixel painter!
