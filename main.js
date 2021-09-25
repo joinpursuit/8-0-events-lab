@@ -24,6 +24,7 @@ const accessCell = document.querySelector(".cell")
 
 const accessEntire = document.querySelector("#canvas")
 
+const colorBlockBtn = document.querySelector("#color-block-button")
 
 function colorSelection() {
   for (let color of availableColors) {
@@ -36,9 +37,13 @@ function colorSelection() {
 }
 
 function colorBlock() {
-  for (let color of availableColors) {
-    color.addEventListener("click", (event) => {
 
+  //remember that query selector!!! Select of ID of color block button I created. 
+
+  for (let color of availableColors) {
+    //here I can apply the event listener to my selected button
+    colorBlockBtn.addEventListener("click", (event) => {
+prompt("pick which color you want!")
       accessEntire.style.backgroundColor = event.target.style.backgroundColor
 
     });
