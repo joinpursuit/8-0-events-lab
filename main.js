@@ -22,8 +22,25 @@ for(let cell of cells){
     e.target.style.backgroundColor=currentColor2.style.backgroundColor;
   })
 }
-// for(let cell of cells) {
-//   cell.style.width="25px";
-//   cell.style.height="25px";
-//   cell.style.margin= 0;
-// }
+let canvas=document.getElementById("canvas");
+const main2 = document.querySelector("main");
+for (let i = 0; i < 9900; i++) {
+  const div = document.createElement("div");
+  div.classList.add("cell");
+  main2.append(div);
+}
+let cells2=document.querySelectorAll(".cell");
+canvas.style.gridTemplateColumns= "repeat(100, 5px)";
+canvas.style.gridTemplaterows= "5px";
+
+for(let cell of cells2){
+  cell.style.width="5px";
+  cell.style.height="5px";
+  cell.addEventListener("click", e => {
+    e.target.style.backgroundColor=currentColor2.style.backgroundColor;
+  });
+}
+
+
+
+
