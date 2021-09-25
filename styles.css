@@ -75,3 +75,7 @@ header h1 {
   margin: 25px auto;
   width: 125px;
 }
+
+#pop-up-text {
+  text-align: center;
+}
