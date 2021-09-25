@@ -48,11 +48,9 @@ function cellBlock() {
 
 
 
-
-
 function colorBlock() {
 
-  //remember that query selector!!! Select of ID of color block button I created. 
+  //remember that query selector!!! Select of ID of color block button I created. Done above.
 
 
   //here I can apply the event listener to my selected button
