@@ -29,3 +29,16 @@ const cells = document.querySelectorAll('.cell');
     });;
   }
 
+  // const button = document.querySelector('.button');
+  // for(const cell of cells){
+  //   button.addEventListener("click", () => {
+  //     cell.style.background = selected.style.background;
+      
+  //   });;
+  // }
+  function refreshPage(){
+    window.location.reload();
+}
+
+
+
