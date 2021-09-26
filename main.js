@@ -63,5 +63,5 @@ function complete(){
 
 let body = document.querySelector("body");
 body.addEventListener("click", (e) => {
-  firstSection.style.backgroundColor = "white";
+  firstSection.style.backgroundColor = "black";
 })
