@@ -28,7 +28,7 @@ for (let i = 0; i < 100; i++) {
     const startOver = document.querySelectorAll("#start-over");
 
       for(let startbtn of startOver){
-        startbtn.addEventListener("click", (event) =>{
+        startbtn.addEventListener("mousedown", (event) =>{
           event.target.setAttribute("style", "background-color: green")
           window.location.reload();
         });

@@ -69,10 +69,12 @@ header h1 {
 }
 
 #start-over {
-  display:grid;
-  position:relative;
+  display:block;
   text-align: center;
   background-color: rgb(181, 180, 197);
+  background-position: ;
   color: white;
-  margin: 1em 30em 1em 30em
+  margin: 10px 350px;
+  border: 2px solid black;
+  max-width: 700px 700px;
 }
