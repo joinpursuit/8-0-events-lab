@@ -8,13 +8,27 @@ for (let i = 0; i < 100; i++) {
 
 // You may write your code here!
 
-document.querySelectorAll('div').forEach(div => {
-div.addEventListener('click', () => {
-const paint = document.querySelector('#current-color')
-  if (div.className === 'cell'){
-    div.style.background = paint.style.background
-    } else {
-      paint.style.background = div.style.background
-    }
-  })
-})
+// document.querySelectorAll('div').forEach(div => {
+// div.addEventListener('click', () => {
+// const paint = document.querySelector('#current-color')
+//   if (div.className === 'cell'){
+//     div.style.background = paint.style.background
+//     } else {
+//       paint.style.background = div.style.background
+//     }
+//   })
+// })
+
+const currentColor = document.querySelector("#current-color");
+document.querySelectorAll(".color").forEach((color) => {
+  color.addEventListener("click", () => {
+    currentColor.style.background = color.style.background;
+    console.log(currentColor);
+  });
+});
+
+document.querySelectorAll(".cell").forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.style.background = currentColor.style.background;
+  });
+});
