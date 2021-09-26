@@ -69,31 +69,5 @@ header h1 {
 }
 
 
-.allBtn{
-  display: grid;
-  float: right;
-  gap: 5px;
-}
 
 
-.btn {
-  margin-right:25px;
-  float: right;
-  background-color: rgba(74, 76, 78, 0.24);
-  height: 35px;
-  width: 100px;
-  text-align: center;
-  border-radius:25px;
- 
-}
-
-.btn-current {
-  margin-right:25px;
-  float: right;
-  background-color: rgba(4, 113, 121, 0.589);
-  height: 35px;
-  width: 100px;
-  text-align: center;
-  border-radius:25px;
- 
-}
