@@ -4,6 +4,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  color:white;
+  font-family: sans-serif;
+  min-height:100vh;
+  box-sizing: border-box;
+  background-image: url("Screen\ Shot\ 2021-09-23\ at\ 5.18.58\ PM.png");
 }
 
 h1,
@@ -16,13 +21,16 @@ h6 {
 }
 
 header {
-  background: #7e7f9a;
-  color: white;
+  background:black;
+  color:bisque;
 }
 
 header h1 {
   margin: 0 0 50px;
   padding: 25px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: bisque;
 }
 
 #canvas {
@@ -32,6 +40,11 @@ header h1 {
   height: 500px;
   margin: 0 auto;
   width: 500px;
+  box-shadow:
+  -1px -1px 20px 0px #ffffff,
+   -4px -4px 5px 0px #ff0000,
+    7px 7px 20px 0px #a300d8,
+     4px 4px 5px 0px #ffffff;
 }
 
 .cell {
@@ -41,6 +54,8 @@ header h1 {
   margin: 0;
   height: 50px;
   width: 50px;
+  background-color: white;
+  animation: 3s;
 }
 
 #current-color {
@@ -66,4 +81,61 @@ header h1 {
   margin: 10px;
   height: 50px;
   width: 50px;
+}
+
+.animated {
+  animation : bounce 0.4s;
+}
+@keyframes bounce {
+  10% {
+    width: 60px;
+    height: 60px;
+  }
+  30% {
+    width: 50px;
+    height: 60px;
+  }
+  50% {
+    width: 40px;
+    height: 50px;
+    transform: translateY(-80px);
+  }
+}
+
+#palette .color:hover {
+  opacity:0.7;
+  cursor: pointer;
+}
+
+.fall {
+  background-color: white;
+
+}
+
+.reset{
+margin:  1000px;
+border:none;
+display: block;
+margin: 25px auto;
+width: 80px;
+height: 40px;
+border-radius:40px;
+cursor:pointer;
+transition: all 0.3s ease 0s;
+font-weight:500;
+}
+
+.reset:hover {
+  color: red;
+  background-color: black;
+}
+
+span {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+span.animated{
+  opacity: 1;
+  color :crimson;
 }
