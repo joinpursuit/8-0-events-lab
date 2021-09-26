@@ -131,3 +131,11 @@ oneColor.addEventListener("click", ()=>{
     cell.style.backgroundColor = current.style.backgroundColor;
   }
 })
+
+// change cursor on canvas
+let onCanvas = document.querySelector("#canvas");
+onCanvas.setAttribute("style", "cursor: crosshair");
+
+// change cursor on color palette
+let onColors = document.querySelector("#palette");
+onColors.setAttribute("style", "cursor: url('./assets/butterfly.png'),auto;");
