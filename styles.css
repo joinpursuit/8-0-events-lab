@@ -41,10 +41,10 @@ header h1 {
   margin: 0 auto;
   width: 500px;
   box-shadow:
-  -1px -1px 20px 0px #ff0000,
-   -4px -4px 5px 0px #ff0000, 
-   7px 7px 20px 0px #ababab,
-    4px 4px 5px 0px #c77f7f;
+  -1px -1px 20px 0px #ff0404,
+   -4px -4px 5px 0px #ff0000,
+    7px 7px 20px 0px #060303,
+     4px 4px 5px 0px #9b71a0;
 }
 #canvas div {
   background-color: black;
@@ -116,7 +116,7 @@ header h1 {
 }
 
 .reset{
-margin:  1000px;
+font-size: 10px;
 border:none;
 display: block;
 margin: 25px auto;
@@ -129,6 +129,7 @@ font-weight:500;
 }
 
 .reset:hover {
+  font-size: 30px;
   color: red;
   background-color: black;
 }
@@ -139,6 +140,10 @@ span {
 }
 
 span.animated{
+  font-size: 50px;
   opacity: 1;
-  color :crimson;
+  /* color :rgb(255, 0, 115); */
+  background: -webkit-linear-gradient(rgb(247, 5, 255), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
