@@ -72,6 +72,7 @@ Add directions of how to play
 */
 let directions = document.createElement("div");
 directions.textContent = "How to Play: Choose a color below, then paint the pixels!";
+directions.setAttribute("id", "directions");
 directions.setAttribute("style", "text-align:center;");
 // add to body
 main.before(directions);
@@ -139,3 +140,13 @@ onCanvas.setAttribute("style", "cursor: crosshair");
 // change cursor on color palette
 let onColors = document.querySelector("#palette");
 onColors.setAttribute("style", "cursor: url('./assets/butterfly.png'),auto;");
+
+
+// move current under palette
+let header = document.querySelector("header");
+onColors.after(current);
+
+// add current color to header
+header.append(current);
+// style #current-color
+current.setAttribute("style", "position:fixed; margin-left:20px;");
