@@ -44,8 +44,8 @@ for (let i = 0; i < 100; i++) {
           e.target.classList.remove('active');
     });
   
-  // Initial animation
-  setTimeout(() => {
-    span.classList.add('active');
-  }, 750 * (idx+1))
-});
+    // Initial animation
+    setTimeout(() => {
+      span.classList.add('active');
+    }, 750 * (idx+1))
+  });
