@@ -155,7 +155,16 @@ buttonContainer.append(darkMode);
 // add event listener for button - clears canvas
 function myFunction() {
   var element = document.body;
+  // dark mode
   element.classList.toggle("dark-mode");
+  let darkCss = document.querySelector(".dark-mode");
+  darkCss.style.backgroundColor = "black";
+  darkCss.style.color = "white";
+  // light mode
+  element.classList.toggle("light-mode");
+  let lightCss = document.querySelector(".light-mode");
+  lightCss.style.backgroundColor = "#def";
+  lightCss.style.color = "violet";
 }
 
 
