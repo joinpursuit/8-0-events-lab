@@ -8,7 +8,6 @@ for (let i = 0; i < 2500; i++) {
 
 // You may write your code here!
 
-
 const currentColor = document.querySelector("#current-color");
 const colors = document.querySelectorAll("div.color");
 
@@ -42,7 +41,6 @@ cells.forEach((cell) => {
     cell.style.background = currentColor.style.background
   }); 
 });
-
 
 // > change color of the current cell while hovering 
 
