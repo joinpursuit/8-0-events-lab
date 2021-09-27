@@ -29,17 +29,22 @@ for (let cell of canvas){
   cell.addEventListener("click", () =>{
     console.log("hello you clicked on a cell")
     cell.style.backgroundColor = currentColor.style.backgroundColor
+
+
+  })
+
+  cell.addEventListener("mouseover", () => {
     cell.append(studioGhibliImage2)
   })
 }
 //EXtra 
-let studioGhibliImage1 = document.createElement("img")
-studioGhibliImage1.setAttribute("src", "./ponyo.png")
-studioGhibliImage1.setAttribute("alt", "Image of Ponyo")
-studioGhibliImage1.setAttribute("width", "15")
 
 
 
 currentColor.addEventListener("mouseover", () =>{
-  currentColor.append(studioGhibliImage2)
+  let studioGhibliImage1 = document.createElement("img")
+  studioGhibliImage1.setAttribute("src", "./ponyo.png")
+  studioGhibliImage1.setAttribute("alt", "Image of Ponyo")
+  studioGhibliImage1.setAttribute("width", "15")
+  currentColor.append(studioGhibliImage1)
 })
