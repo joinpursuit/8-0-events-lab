@@ -12,6 +12,8 @@ for (let i = 0; i < 2500; i++) {
 const currentColor = document.querySelector("#current-color");
 const colors = document.querySelectorAll("div.color");
 
+// > change the background of #current-color 
+
 // > for of loop
 // for (const color of colors) {
 //   color.addEventListener("click", () => {
@@ -27,6 +29,8 @@ colors.forEach((color) => {
 
 const cells = document.querySelectorAll("div.cell");
 
+// > change color of the current cell with a click
+
 // > for of loop
 // for (const cell of cells) {
 //   cell.addEventListener("click", () => {
@@ -34,7 +38,18 @@ const cells = document.querySelectorAll("div.cell");
 // };
 
 cells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.style.background = currentColor.style.background
+  }); 
+});
+
+
+// > change color of the current cell while hovering 
+
+cells.forEach((cell) => {
   cell.addEventListener("mouseover", () => {
     cell.style.background = currentColor.style.background
   }); 
 });
+
+
