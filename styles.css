@@ -12,8 +12,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "VT323", monospace;
+  font-family: "VT323", monospace; 
 }
+/* heading tags I have no idea  */
 
 header {
   background: #7e7f9a;
@@ -24,13 +25,14 @@ header h1 {
   margin: 0 0 50px;
   padding: 25px;
 }
-
+/* setting our main #canvas below.  */
 #canvas {
   border: 3px solid #393e41;
   display: grid;
   grid-template-columns: repeat(10, 50px);
   height: 500px;
   margin: 0 auto;
+  /* nomargin at the top */
   width: 500px;
 }
 
@@ -40,18 +42,25 @@ header h1 {
   display: inline-block;
   margin: 0;
   height: 50px;
+  /* the height of 50px in each cell #canvas height & width 500px = 10 columns & rows */
   width: 50px;
 }
 
 #current-color {
+  /* setting up dimensions of #current-color */
+  background-color: rgb(0,0,0);
   border: 2px solid #393e41;
   display: block;
   height: 50px;
+
   margin: 25px auto;
+  /* this should be the margin between #canvas & #palette */
+
   width: 50px;
 }
 
 #palette {
+  /* This is the section, block?  for #palette  */
   height: 50px;
   margin: 25px auto;
   text-align: center;
@@ -59,6 +68,7 @@ header h1 {
 }
 
 #palette .color {
+  /* these are the individual .color <divs> but why are they round? */
   border: 2px solid #393e41;
   border-radius: 50%;
   box-sizing: border-box;
