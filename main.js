@@ -133,6 +133,43 @@ oneColor.addEventListener("click", ()=>{
   })
 })
 
+/*
+MAKE BUTTON #3 - Change to dark mode
+*/
+// create `darkMode` button
+let darkMode = document.createElement('div');
+// set attributes to element
+// darkMode.setAttribute("class", "darkness");
+darkMode.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
+darkMode.textContent = "Dark/Light";
+
+// let body = document.querySelector("body");
+// body.setAttribute("style", "color:red; backgroundColor:pink;");
+
+// for dark mode
+darkMode.setAttribute("onclick", "myFunction()");
+
+// add to body
+buttonContainer.append(darkMode);
+
+// add event listener for button - clears canvas
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+
+// .dark-mode {
+//   background-color: black;
+//   color: white;
+// }
+
+// darkMode.addEventListener("click", ()=>{
+  // body.style.backgroundColor = "black";
+  // body.style.color = "pink";
+// })
+
+
 // change cursor on canvas
 let onCanvas = document.querySelector("#canvas");
 onCanvas.setAttribute("style", "cursor: crosshair");
