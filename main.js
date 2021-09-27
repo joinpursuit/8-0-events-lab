@@ -61,3 +61,16 @@ document.querySelector("#canvas").append(anotherButton);
 anotherButton.addEventListener("click", () => {
   cells.forEach((cell) => (cell.style.background = currColor.style.background));
 });
+
+//Create button
+const darkMode = document.createElement("div");
+//add text
+darkMode.textContent = "🌗";
+darkMode.setAttribute("onclick", "myFunction()");
+//add button to canvas
+document.querySelector("#canvas").append(darkMode);
+//add functionality
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
