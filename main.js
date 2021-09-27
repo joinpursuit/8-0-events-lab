@@ -1,6 +1,7 @@
 // Do not change the code below.
 const main = document.querySelector("main");
-let size = Number(prompt("enter desired grid size(will be NxN)"));
+//prompt for grid dimensions
+let size = Number(prompt("enter desired grid size N(will be NxN)"));
 function numberPrompt(size) {
   if (Number.isNaN(size)) {
     size = Number(prompt("Not a number, please enter a number"));
@@ -10,8 +11,8 @@ function numberPrompt(size) {
   }
 }
 size = numberPrompt(size);
-
-let boxSize = Number(prompt("enter desired boxSize in pixels"));
+//prompt for box size
+let boxSize = Number(prompt("enter desired box size in pixels"));
 function numberPrompt(boxSize) {
   if (Number.isNaN(boxSize)) {
     boxSize = Number(prompt("Not a number, please enter a number"));
@@ -20,13 +21,13 @@ function numberPrompt(boxSize) {
     return boxSize;
   }
 }
-boxSize = numberPrompt(size);
+boxSize = numberPrompt(boxSize);
 for (let i = 0; i < size * size; i++) {
   const div = document.createElement("div");
   div.classList.add("cell");
   div.style.background = "white";
-  div.style.height = boxSize;
-  div.style.width = boxSize;
+  div.style.height = `${boxSize}px`;
+  div.style.width = `${boxSize}px`;
   main.append(div);
 }
 const canvas = document.querySelector("#canvas");
@@ -66,6 +67,10 @@ colors.forEach((color) => {
 const cells = document.querySelectorAll(".cell");
 //basic click to change
 cells.forEach((cell) => {
+  //added dragover, is there a way to make it more instant/responsive?
+  cell.addEventListener("dragover", (event) => {
+    cell.style.background = `${currentColor.style.background}`;
+  });
   cell.addEventListener("mousedown", (event) => {
     cell.style.background = `${currentColor.style.background}`;
   });
