@@ -22,7 +22,7 @@ for (let cell of canvas){
   let studioGhibliImage2 = document.createElement("img")
   studioGhibliImage2.setAttribute("src", "https://www.pngkey.com/png/full/188-1887025_i-made-a-cute-and-quick-transparent-calcifer.png")
   studioGhibliImage2.setAttribute("alt", "Image of Calcifur")
-  studioGhibliImage2.setAttribute("width", "25")
+  studioGhibliImage2.setAttribute("width", "35")
 
   cell.setAttribute("style", "backgroundColor")
 
@@ -33,8 +33,14 @@ for (let cell of canvas){
 
   })
 
+  studioGhibliImage3 = document.createElement("img")
+  studioGhibliImage3.setAttribute("src", "https://i.pinimg.com/originals/29/0a/70/290a70e82fcb16e9ce54b452e1604599.png")
+  studioGhibliImage3.setAttribute("alt", "Image of Totoro")
+  studioGhibliImage3.setAttribute("width", "48")
+
   cell.addEventListener("mouseover", () => {
     cell.append(studioGhibliImage2)
+    cell.append(studioGhibliImage3)
   })
 }
 //EXtra 
