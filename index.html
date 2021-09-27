@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixel Painter</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="main.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Pixel Painter</h1>
-    </header>
-    <main id="canvas"></main>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <video 
+    autoplay loop class ="back-video" muted plays-inline>
+    <source src="media/Pexels Videos 2792967.mp4" type="video/mp4">
+</video>
+
+<!-- <audio autoplay>
+    <source src="media/KissTheRain.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>  -->
+  <embed src="media/KissTheRain.mp3" loop="true" autostart="true" width="2" height="0">
+    
+    <h1 class="neon-text">
+        Make your constellation
+    </h1>
+
+    <button id="save">Save</button>
+
+    <main 
+      class="background">
+        <main id="canvas"></main>
+    </main>
+
     <section id="current-color"></section>
-    <section id="palette">
-      <div class="color" style="background: black"></div>
-      <div class="color" style="background: red"></div>
-      <div class="color" style="background: orange"></div>
-      <div class="color" style="background: yellow"></div>
-      <div class="color" style="background: green"></div>
-      <div class="color" style="background: blue"></div>
-      <div class="color" style="background: purple"></div>
-      <div class="color" style="background: white"></div>
-    </section>
-  </body>
+
+    <div class="color-list">
+      <label for="pen-color"></label>
+      <input type="color" id ='pen-color' value="#000"> 
+    </div>
+
+    <div 
+      class="test-neon" style="box-shadow: 0 0 10px #ffffb7, 0 0 20px #ffffb7, 0 0 30px blue,  0 0 50px #ffffb7;">
+    </div>
+    
+</body>
 </html>

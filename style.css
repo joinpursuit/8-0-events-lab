@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #7864fa,
+        0 0 42px rgb(111, 39, 255),
+        0 0 82px rgb(22, 11, 179),
+        0 0 92px rgb(39, 0, 74),
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+
+  }
+  
+  h1 {
+    padding: 20px;
+    font-size: 2.2rem;
+    /* animation: flicker 1.5s infinite alternate;      */
+    text-align: center;
+  }
+
+  h1 span {
+      position: relative;
+      opacity: 0;
+      animation: textAnimation 5s ease-in-out forwards;
+  }
+
+  @keyframes textAnimation {
+    to {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.background{
+    
+position: relative;
+width: 100%;
+height: 100%;
+/* background-color: #000000; */
+display: flex;
+flex-wrap: wrap;
+overflow: hidden;
+animation: changeColor 5s linear infinite;
+
+}
+
+ @keyframes changeColor {
+    0% {
+        filter: hue-rotate(0deg);
+        
+    }
+    100% {
+        filter: hue-rotate(50deg);
+    }
+} 
+
+
+.dots {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 1px solid #25002b;
+    border-radius: 50%;
+    box-sizing: border-box; 
+    animation: none;
+}
+
+.dots::before {
+
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/* background-color: #00ff0a; */
+transform: scale(0.1);
+box-shadow: 0 0 10px #00ff0a,
+0 0 20px #00ff0a,
+0 0 40px #00ff0a,
+0 0 60px #00ff0a,
+0 0 80px #00ff0a,
+0 0 100px #00ff0a;
+border-radius: 50%;
+pointer-events: none;
+transition: 2s;
+
+}
+
+.dots:hover::before {
+    transform: scale(1);
+    transition: 0s;
+    
+}
+
+
+.afterDots {
+    /* animation: flicker 1.5s infinite alternate;    */
+    box-shadow: 0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #0fa;
+}
+
+@keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%{
+  
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa
+    
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+  }
+
+@keyframes flickerTwo  {
+    0%, 18%, 22%, 25%, 53%, 57% {
+        box-shadow:
+        0 0 4px rgb(255, 0, 0),
+        0 0 11px rgb(255, 119, 0),
+        0 0 19px rgb(170, 255, 0),
+        0 0 40px rgb(0, 21, 255),
+        0 0 80px rgb(57, 0, 85),
+        0 0 90px #0fa
+       
+    }
+}
+  
+
+#canvas {
+    margin:30px;
+    display: grid;
+    grid-template-columns: repeat(50, 10px);
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+#current-color {
+
+    display: block;
+    height: 50px;
+    margin: 15px auto;
+    margin-bottom: 0%;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff,
+    0 0 20px #00ff0a;
+  }
+
+  /* video */
+
+  .back-video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+@media(min-aspect-ratio: 16/9) {
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9) {
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+#pen-color {
+    height: 30px;
+    margin: 25px auto;
+    width: 20%;
+    display: block;
+    background-color: transparent;
+    border: none;
+}
+
+
+#pen-color:hover{
+    box-shadow: 0 0 20px rgb(108, 108, 255);
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /* transform: translate(-50%, -50%); */
+    box-shadow:0 0 10px #00ff0a, #14ffe9, #ffeb3b, #ff00e0;
+    display: block;
+}
+
+.test-neon {
+    box-shadow: 0 0 10px rgb(11, 9, 165),
+    0 0 30px rgb(244, 255, 213),
+    0 0 40px currentColor,
+    0 0 50px currentColor;
+    background: transparent;
+}
+
+
+
+button {
+    padding: 5px;
+    height: auto;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0px 0px 0px 700px; */
+    color: rgb(253, 255, 227);
+    text-shadow: 0 0 10px rgb(251, 255, 175);
+    display: block;
+    border: none;
+    border-radius: 100%;
+    /* flex: 1; */
+    text-decoration: none;
+    background: transparent;
+    /* box-shadow: 0 0 10px rgb(255, 252, 224); */
+}
