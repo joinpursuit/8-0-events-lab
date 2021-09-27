@@ -7,3 +7,16 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+const currentColor = document.querySelector("#current-color");
+document.querySelectorAll(".color").forEach((color) => {
+  color.addEventListener("click", () => {
+    currentColor.style.background = color.style.background;
+    console.log(currentColor);
+  });
+});
+
+document.querySelectorAll(".cell").forEach((cell) => {
+  cell.addEventListener("click", () => {
+    cell.style.background = currentColor.style.background;
+  });
+});
