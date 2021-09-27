@@ -28,20 +28,20 @@ header h1 {
 #canvas {
 	border: 3px solid #393e41;
 	display: grid;
-	grid-template-columns: repeat(50, 10px);
+	grid-template-columns: repeat(10, 50px);
 	height: 500px;
 	margin: 0 auto;
 	width: 500px;
+	cursor: url("./images/circle24dp.png") 10 10, auto;
 }
 
-
 .cell {
-	border: 1px solid #393e41;
+	border: 0.3px solid #393e41;
 	box-sizing: border-box;
 	display: inline-block;
 	margin: 0;
-	height: 10px;
-	width: 10px;
+	height: 50px;
+	width: 50px;
 }
 
 #current-color {
