@@ -28,8 +28,18 @@ paletteColorSection.forEach((palet) => {
 const mainCells = document.querySelectorAll('main .cell');
 mainCells.forEach((cell) => {
   //Calling event listener on each DOM element
+  cell.addEventListener('click', (event) => {
+
+    //console.log(event.target)    
+    event.target.style.backgroundColor = currentColor.style.backgroundColor;
+  });
+
+});
+
+mainCells.forEach((cell) => {
+  //Calling event listener on each DOM element
   cell.addEventListener('mousedown', (event) => {
-    
+
     //console.log(event.target)    
     event.target.style.backgroundColor = currentColor.style.backgroundColor;
   });
@@ -38,11 +48,12 @@ mainCells.forEach((cell) => {
 
  
 //Additional settings
+
 const divButton = document.createElement('div');
 divButton.classList.add('allBtn');
 
 //Styling Div containing buttons 
- divButton.setAttribute("style","width:150px; display:grid; float:right; gap:5px; margin: 18px 18px; align-items: center; border: 2px solid #393e41; padding-:5px 5px;border: 10px;;");
+ divButton.setAttribute("style","width:150px;  display:grid; float:right; gap:5px; margin: 18px 18px; align-items: center; border: 2px solid #393e41; padding-:5px 5px;border: 10px;;");
 
 for (let i =0; i < 2; i++){
   const button = document.createElement('button');
@@ -54,14 +65,13 @@ for (let i =0; i < 2; i++){
 divButton.firstElementChild.classList.add('btn');
 const firstChild = divButton.firstElementChild;
 firstChild.textContent = 'Reset All';
-firstChild.setAttribute("style","height:30px; background-color: #f44336;font-size: 18px; border: 3px solid #BADA55; border-radius: 5px 20px 5px")
+firstChild.setAttribute("style","font-size:18px; background-color: #cc9900; border: 3px solid #BADA55; border-radius: 5px 20px 5px")
 
-
-//Color-matching class & textNode  assignment
+//Color-matching class & textNode  assignment f44336 border-radius: 5px 20px 5px"
 divButton.lastElementChild.classList.add('btn-current');
 const secondChild = divButton.lastElementChild;
 secondChild.textContent = 'Color Match';
-secondChild.setAttribute("style","font-size:15px;font-family: Gill Sans Extrabold, sans-serif; height:30px; background-color: #4bf0ab; border: 3px solid #BADA55; border-radius: 5px 10px 15px 20px")
+secondChild.setAttribute("style","font-size:18px; background-color: #85adad; border: 3px solid #BADA55; border-radius: 5px 10px 15px 20px")
 
 //Assign the div container to the DOM element 
 main.after(divButton);
