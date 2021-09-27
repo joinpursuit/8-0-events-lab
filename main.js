@@ -60,3 +60,7 @@ currentColor.addEventListener("mouseover", () =>{
   studioGhibliImage1.setAttribute("width", "15");
   currentColor.append(studioGhibliImage1);
 })
+
+function refreshPage(){
+  window.location.reload()
+}
