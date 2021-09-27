@@ -35,7 +35,7 @@ header h1 {
 }
 
 .cell {
-  border: 1px solid #393e41;
+  border: 0.5px solid #393e41;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
