@@ -106,9 +106,9 @@ buttonContainer.append(clearButton);
 
 // add event listener for button - clears canvas
 clearButton.addEventListener("click", ()=>{
-  for (let cell of cells){
+  cells.forEach(cell => {
     cell.style.backgroundColor = "";
-  }
+  })
 })
 
 
@@ -128,9 +128,9 @@ buttonContainer.append(oneColor);
 
 // add event listener for button - makes canvas all current color
 oneColor.addEventListener("click", ()=>{
-  for (let cell of cells){
+  cells.forEach(cell => {
     cell.style.backgroundColor = current.style.backgroundColor;
-  }
+  })
 })
 
 // change cursor on canvas
@@ -146,7 +146,16 @@ onColors.setAttribute("style", "cursor: url('./assets/butterfly.png'),auto;");
 let header = document.querySelector("header");
 onColors.after(current);
 
-// add current color to header
+// add current color to side of page
 header.append(current);
 // style #current-color
 current.setAttribute("style", "position:fixed; margin-left:20px;");
+
+// create favicon using javascript
+let favicon = document.createElement("link");
+favicon.setAttribute("rel", "icon");
+favicon.setAttribute("type", "image/png");
+favicon.setAttribute("href", "assets/butterfly.png");
+
+let head = document.querySelector("head");
+head.append(favicon);
