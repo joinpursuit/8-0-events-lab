@@ -1,6 +1,6 @@
 // Do not change the code below.
 const main = document.querySelector("main");
-let size = Number(prompt("enter desired grid size"));
+let size = Number(prompt("enter desired grid size(will be NxN)"));
 function numberPrompt(size) {
   if (Number.isNaN(size)) {
     size = Number(prompt("Not a number, please enter a number"));
@@ -10,18 +10,30 @@ function numberPrompt(size) {
   }
 }
 size = numberPrompt(size);
+
+let boxSize = Number(prompt("enter desired boxSize in pixels"));
+function numberPrompt(boxSize) {
+  if (Number.isNaN(boxSize)) {
+    boxSize = Number(prompt("Not a number, please enter a number"));
+    return numberPrompt(boxSize);
+  } else {
+    return boxSize;
+  }
+}
+boxSize = numberPrompt(size);
 for (let i = 0; i < size * size; i++) {
   const div = document.createElement("div");
   div.classList.add("cell");
   div.style.background = "white";
+  div.style.height = boxSize;
+  div.style.width = boxSize;
   main.append(div);
 }
-document.querySelector(
-  "#canvas"
-).style.gridTemplateColumns = `repeat(${size}, ${500 / size}px)`;
-document.querySelector("#canvas").style.gridTemplateRows = `repeat(${size}, ${
-  500 / size
-}px)`;
+const canvas = document.querySelector("#canvas");
+canvas.style.height = `${size * boxSize}px`;
+canvas.style.width = `${size * boxSize}px`;
+canvas.style.gridTemplateColumns = `repeat(${size}, ${boxSize}px)`;
+canvas.style.gridTemplateRows = `repeat(${size}, ${boxSize}px)`;
 // You may write your code here!
 const currentColor = document.querySelector("#current-color");
 currentColor.style.background = "white";
