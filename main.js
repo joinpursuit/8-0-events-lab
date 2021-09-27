@@ -16,6 +16,14 @@ for(let color of colorPalette){
   })
 }
 
+let canvas = document.querySelectorAll("#canvas .cell")
 
+for (let cell of canvas){
+  cell.setAttribute("style", "backgroundColor")
+  cell.addEventListener("click", () =>{
+    console.log("hello you clicked on a cell")
+    cell.style.backgroundColor = currentColor.style.backgroundColor
+  })
+}
 
 //look over target
