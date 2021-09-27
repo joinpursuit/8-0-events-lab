@@ -19,17 +19,33 @@ for (let i = 0; i < 100; i++) {
 };
 
     for(let cell of cells){
-      cell.addEventListener("mouseover", (event) =>{
+      cell.addEventListener("mousedown", (event) =>{
         event.target.style.backgroundColor = currentColors.style.backgroundColor;
     });
 };
 
     // Added Start button that relads the page after
-    const startOver = document.querySelectorAll("#start-over");
+    const startOver = document.querySelectorAll(".glow-on-hover");
 
       for(let startbtn of startOver){
         startbtn.addEventListener("mousedown", (event) =>{
-          event.target.setAttribute("style", "background-color: green")
-          window.location.reload();
+         window.location.reload();
         });
       }
+ 
+      //Header Animation
+
+    const spans = document.querySelectorAll('.word span');
+      spans.forEach((span, idx) => {
+        span.addEventListener('click', (e) => {
+        e.target.classList.add('active');
+        });
+          span.addEventListener('animationend', (e) => {
+          e.target.classList.remove('active');
+    });
+  
+  // Initial animation
+  setTimeout(() => {
+    span.classList.add('active');
+  }, 750 * (idx+1))
+});
