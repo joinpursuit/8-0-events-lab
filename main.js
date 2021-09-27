@@ -56,7 +56,7 @@ function colorBlock() {
   //here I can apply the event listener to my selected button
   colorBlockBtn.addEventListener("click", (event) => {
     for (let color of availableColors) {
-      color.addEventListener("click", (event) => {
+      color.addEventListener("dblclick", (event) => {
         accessEntire.style.backgroundColor = event.target.style.backgroundColor
       });
     }
