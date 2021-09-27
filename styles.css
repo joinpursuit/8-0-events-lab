@@ -73,10 +73,8 @@ header h1 {
 .buttons {
   padding: 30px;
   display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 20% 20%;;
-  grid-column: 1 / span 2;
-  
+  grid-template-rows: 200%;
+  grid-template-columns: 20% 20% 20%;
   grid-gap: 20px;
   justify-content: center;
 }
