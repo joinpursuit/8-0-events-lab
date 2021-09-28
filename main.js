@@ -1,6 +1,6 @@
 // Do not change the code below.
 const main = document.querySelector("main");
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 500; i++) {
   const div = document.createElement("div");
   div.classList.add("cell");
   main.append(div);
@@ -20,7 +20,7 @@ for (let eachDiv of allDiv){
 }
 // it needs to change the color when it is picked ..
 for(let ceo of cole ){
-  ceo.addEventListener("click", (e) => {
+  ceo.addEventListener("mousemove", (e) => {
     ceo.style.backgroundColor = firstSection.style.backgroundColor;
     e.stopPropagation();
   })
@@ -54,6 +54,7 @@ function onTick(){
     return;
   }
 }
+
 function complete(){
   clearInterval(timer);
   timer = null;

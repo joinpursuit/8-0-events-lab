@@ -34,39 +34,45 @@ header h1 {
 }
 
 #canvas {
-  border: 3px solid #393e41;
+  border-top: 1px solid #ff0000;
+  border-bottom: 1px solid #ff0000;
+  border-right: 6px solid #ff0000;
+  border-left: 1px solid #ff0000;
+
   display: grid;
-  grid-template-columns: repeat(10, 50px);
+  grid-template-columns: repeat(20, 25px);
   height: 500px;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 500px;
-  box-shadow:
-  -1px -1px 20px 0px #ff0404,
-   -4px -4px 5px 0px #ff0000,
-    7px 7px 20px 0px #060303,
-     4px 4px 5px 0px #9b71a0;
+  /* box-shadow: 1px 2px 2px red ,
+  1px 2px 2px red,
+  1px 2px 2px: red ; */
+
 }
+
 #canvas div {
   background-color: black;
 }
 
 .cell {
   border: 1px solid #393e41;
+  border-radius: 1px;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 30px;
   background-color: white;
   animation: 3s;
+  opacity: 0.9;
 }
 
 #current-color {
-  border: 2px solid #393e41;
+  border: 1px solid #393e41;
   display: block;
-  height: 50px;
-  margin: 25px auto;
-  width: 50px;
+  height: 20px;
+  margin: 20px auto;
+  width: 80px;
 }
 
 #palette {
@@ -143,7 +149,8 @@ span.animated{
   font-size: 50px;
   opacity: 1;
   /* color :rgb(255, 0, 115); */
-  background: -webkit-linear-gradient(rgb(247, 5, 255), rgb(255, 0, 0));
+  background: -webkit-linear-gradient(rgb(247, 0, 255), rgb(255, 0, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
