@@ -21,11 +21,21 @@ for (color of palette){
 
 let cells = document.querySelectorAll('.cell');
 
-for (cell of cells) {
+for (let cell of cells) {
   cell.addEventListener('click', (e) => {
     let currentColor = document.querySelector('#current-color');
     e.target.style.background = currentColor.style.background;
   });
 }
 
-// let button = document.createElement()
+let clearButton = document.createElement('button');
+clearButton.setAttribute('type', 'submit');
+clearButton.textContent = 'Clear Canvas';
+let currentColor = document.querySelector('#current-color');
+currentColor.after(clearButton);
+
+clearButton.addEventListener('click', () => {
+  for (let cell of cells) {
+    cell.style.background = 'white';
+  }
+});

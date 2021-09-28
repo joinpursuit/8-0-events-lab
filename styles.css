@@ -72,3 +72,18 @@ header h1 {
   height: 50px;
   width: 50px;
 }
+
+#palette .color:hover {
+  cursor: pointer;
+  border: 5px solid #393e41
+}
+
+button {
+  height: 25px;
+  position: relative;
+  border: 2px solid black;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
