@@ -193,9 +193,30 @@ let header = document.querySelector("header");
 onColors.after(current);
 
 // add current color to side of page
-header.append(current);
+directions.append(current);
 // style #current-color
-current.setAttribute("style", "position:fixed; margin-left:20px;");
+current.setAttribute("style", "text-align:center; position:relative;");
+// add transparent image over current color
+current.innerHTML = "<img src='assets/paintpalette.png' alt='Paintbrush & Palette'/>"
+// when clicking on current color, scroll to color palette:
+current.addEventListener("click", ()=>{
+  palette.scrollIntoView({ behavior: 'smooth', block: 'center' });
+})
+
+// Back to top
+let backToTop = document.createElement("div");
+backToTop.textContent = "Back to Top";
+palette.append(backToTop);
+backToTop.setAttribute("style", "text-align:center; display:inline-block; border:2px solid black; padding:2px; width:200px;")
+backToTop.addEventListener("click", ()=>{
+  current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+// spacer under back to top button
+let bottomSpace = document.createElement("div");
+backToTop.after(bottomSpace);
+bottomSpace.setAttribute("style", "padding-bottom:30px;")
+
 
 // create favicon using javascript
 let favicon = document.createElement("link");
