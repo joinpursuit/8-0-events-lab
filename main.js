@@ -19,15 +19,23 @@ for (let eachDiv of allDiv){
   })
 }
 // it needs to change the color when it is picked ..
+let paintToggle = false;
 for(let ceo of cole ){
-  ceo.addEventListener("mousemove", (e) => {
+  ceo.addEventListener("mousemove", () => {
+    if(paintToggle === true){
     ceo.style.backgroundColor = firstSection.style.backgroundColor;
-    e.stopPropagation();
+    }
+  })
+  ceo.addEventListener("mousedown", () => {
+    paintToggle = true;
+  })
+  ceo.addEventListener("mouseup", () => {
+    paintToggle = false;
   })
 }
 
 // - [ ] Create a button 
-let reset = document.querySelector("button");
+let reset = document.querySelector(".reset");
 reset.addEventListener("click", () => {
   window.location.reload();
   return false;
@@ -54,15 +62,15 @@ function onTick(){
     return;
   }
 }
-
 function complete(){
   clearInterval(timer);
   timer = null;
 }
 
-// when the body is clicked i want to change the current color to default aka - White
+// when the body is clicked i want to change the current color to default aka - black
 
-let body = document.querySelector("body");
-body.addEventListener("click", (e) => {
-  firstSection.style.backgroundColor = "black";
-})
+// let body = document.querySelector("body");
+// body.addEventListener("click", (e) => {
+//   firstSection.style.backgroundColor = "black";
+// })
+    

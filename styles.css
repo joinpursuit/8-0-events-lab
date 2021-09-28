@@ -34,28 +34,25 @@ header h1 {
 }
 
 #canvas {
-  border-top: 1px solid #ff0000;
-  border-bottom: 1px solid #ff0000;
-  border-right: 6px solid #ff0000;
-  border-left: 1px solid #ff0000;
-
+  border-top: 1px solid #ff6161;
+  border-bottom: 1px solid #ff6161;
+  border-right: 6px solid  #ff6161;
+  border-left: 1px solid  #ac2c2c;
   display: grid;
   grid-template-columns: repeat(20, 25px);
   height: 500px;
   margin: 50px auto;
   width: 500px;
-  /* box-shadow: 1px 2px 2px red ,
-  1px 2px 2px red,
-  1px 2px 2px: red ; */
 
 }
 
 #canvas div {
   background-color: black;
+  cursor: crosshair;
 }
 
 .cell {
-  border: 1px solid #393e41;
+  border: 1px solid #2a2d2f;
   border-radius: 1px;
   box-sizing: border-box;
   display: inline-block;
