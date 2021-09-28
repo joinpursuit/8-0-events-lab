@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); */
 
 html,
 body {
   margin: 0;
   padding: 0;
+  background:
+  linear-gradient(red, transparent),
+  linear-gradient(to top left, lime, transparent),
+  linear-gradient(to top right, blue, transparent);
+background-blend-mode: screen;
 }
 
 h1,
@@ -15,18 +20,65 @@ h6 {
   font-family: "VT323", monospace;
 }
 
-header {
-  background: #7e7f9a;
-  color: white;
-}
-
-header h1 {
+header h1{
+  color: #484848;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: cursive;
+  letter-spacing: 7px;
+  cursor: pointer;
   margin: 0 0 50px;
   padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+  content: "*";
+}
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+#fill-button,
+#reset-button {
+  background-color: rgb(255, 185, 218);
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#fill-button:hover,
+#reset-button:hover {
+  background-color: transparent;
+}
+
+#fill-button:active,
+#reset-button:active {
+  box-shadow: 0px 5px #666;
+  transform: translateY(4px);
 }
 
 #canvas {
-  border: 3px solid #393e41;
+  border: 10px solid #393e41;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
   display: grid;
   grid-template-columns: repeat(10, 50px);
   height: 500px;
@@ -67,3 +119,4 @@ header h1 {
   height: 50px;
   width: 50px;
 }
+

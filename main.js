@@ -18,6 +18,7 @@ for(let color of paletteColors) {
   color.addEventListener("click", (e) => {
     // sets current color to the color that was clicked on the palette
      currentColor.style.backgroundColor = e.target.style.backgroundColor
+     currentColor.style.backgroundImage = e.target.style.backgroundImage
   })
 }
 
@@ -30,11 +31,29 @@ for(let cell of cells) {
   cell.addEventListener("click", (e) => {
     // set target cell color to equal what current color chosen is
     e.target.style.backgroundColor = currentColor.style.backgroundColor
+    e.target.style.backgroundImage = currentColor.style.backgroundImage
   })
 }
 
+// creates a reset button to create blank canvas
+// resets current color to default
+let resetButton = document.querySelector("#reset-button")
+
+for(let cell of cells) {
+resetButton.addEventListener("click", () => {
+    cell.style.backgroundColor = "white"
+    currentColor.style.backgroundColor = "white"
+  })
+}
+
+let fillButton = document.querySelector("#fill-button")
+for(let cell of cells) {
+fillButton.addEventListener("click", () => {
+    cell.style.backgroundColor = currentColor.style.backgroundColor
+  })
+}
 // for(let cell of cells) {
 //   cell.addEventListener("click", () => {
-//     e.target.setAttribute("style", `background: {currentColor.style.background}`)
+//     e.setAttribute("style", `background: {currentColor.style.background}`)
 //   })
 // }
