@@ -16,5 +16,18 @@ palette.forEach((eachColor) => {
   })
 })
 
+//creating event listener to change pixel of canvas
+const canvas = document.querySelector("#canvas");
+canvas.addEventListener("click", (event) => {
+  event.target.style.background = document.querySelector("#current-color").style.background;
+});
 
-  
+let mouseDown = false;
+
+document.querySelectorAll(".cell").forEach((el) => {
+  el.addEventListener("dragover", (event) => {
+    event.target.style.background = document.querySelector("#current-color").style.background;
+  });
+});
+
+
