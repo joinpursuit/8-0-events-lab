@@ -30,6 +30,7 @@ for (let cell of cells) {
 
 let clearButton = document.createElement('button');
 clearButton.setAttribute('type', 'submit');
+clearButton.setAttribute('id', 'clear-btn');
 clearButton.textContent = 'Clear Canvas';
 let currentColor = document.querySelector('#current-color');
 currentColor.after(clearButton);
@@ -39,3 +40,18 @@ clearButton.addEventListener('click', () => {
     cell.style.background = 'white';
   }
 });
+
+// button that changes all cells to current color - Jerry's 
+const colorButton = document.querySelector("#color-all");
+colorButton.addEventListener("click", () =>{
+  for(let cell of cells) {
+    cell.style.background = currentColor.style.background;
+  }
+})
+
+
+// let fillButton = document.createElement('button');
+// fillButton.setAttribute('type', 'submit');
+// fillButton.textContent = 'Color Entire Canvas';
+// let clearButton = document.querySelector('#current-color');
+// currentColor.after(fillButton);

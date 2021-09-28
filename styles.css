@@ -13,6 +13,7 @@ h4,
 h5,
 h6 {
   font-family: "VT323", monospace;
+  text-align: center;
 }
 
 header {
@@ -78,7 +79,7 @@ header h1 {
   border: 5px solid #393e41
 }
 
-button {
+#clear-btn {
   height: 25px;
   position: relative;
   border: 2px solid black;
@@ -86,4 +87,12 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#color-all {
+  height: 25px;
+  border: 2px solid black;
+  margin: 0;
+  top: 50%;
+  left: 50%;
 }
