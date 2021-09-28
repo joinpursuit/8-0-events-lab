@@ -32,3 +32,4 @@ mainCells.forEach((cell) => {
     event.target.style.backgroundColor = currentColor.style.backgroundColor; 
   });
 });
+
