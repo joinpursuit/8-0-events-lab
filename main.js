@@ -33,7 +33,7 @@ let cells = document.querySelectorAll(".cell");// grab every cell
 
 for (let cell of cells){// add event listener to each 
   cell.addEventListener("mousedown", (box)=>{// need to find something better than mousedown
-    box.target.style.backgroundColor = currentColor.style.backgroundColor;// so when a box, .cell , is clicked, its overridded to current color
+    box.target.style.backgroundColor = currentColor.style.backgroundColor;// so when a box, .cell , is clicked, its overridden to current color
   });
 }
 //e.target.style.backgroundColor
