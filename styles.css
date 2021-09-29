@@ -4,6 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(101, 101, 182);
 }
 
 h1,
@@ -17,53 +18,57 @@ h6 {
 /* heading tags I have no idea  */
 
 header {
-  background: #7e7f9a;
-  color: white;
+
+  background-image: linear-gradient(purple,blue,green);
+  color: rgb(39, 11, 35);
 }
 
 header h1 {
-  margin: 0 0 50px;
+  text-align: center;
+  margin: 0 0 20px;
   padding: 25px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
 }
-/* setting our main #canvas below.  */
+
 #canvas {
-  border: 3px solid #393e41;
+  border: 3px solid #d0d8dd;
   display: grid;
   grid-template-columns: repeat(10, 50px);
   height: 500px;
   margin: 0 auto;
-  /* nomargin at the top */
   width: 500px;
 }
 
 .cell {
-  border: 1px solid #393e41;
+  border: 1px solid #879299;
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
   height: 50px;
-  /* the height of 50px in each cell #canvas height & width 500px = 10 columns & rows */
   width: 50px;
 }
 
 #current-color {
-  /* setting up dimensions of #current-color */
-  background-color: rgb(0,0,0);
+
+  background-color: rgb(128, 100, 100);
   border: 2px solid #393e41;
   display: block;
   height: 50px;
-
-  margin: 25px auto;
-  /* this should be the margin between #canvas & #palette */
-
+  margin: 15px auto;
   width: 50px;
 }
 
+button {
+  margin-top: 55px;
+}
+
 #palette {
-  /* This is the section, block?  for #palette  */
-  height: 50px;
+  height: 75px;
   margin: 25px auto;
   text-align: center;
+  background-image: linear-gradient(rgb(116, 68, 116),rgb(82, 82, 233),rgb(54, 124, 54));
   width: 80%;
 }
 

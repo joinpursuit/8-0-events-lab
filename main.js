@@ -4,23 +4,11 @@ for (let i = 0; i < 100; i++) {// loop up to 100
   const div = document.createElement("div");// create each <div>
   div.classList.add("cell");//resulting in 100 <divs> i.e. "cells" within <body>
   main.append(div);//adding to complete #canvas
-}
-
-// You may write your code here!
-
-// for each
-// Section
-// onclick 
-// change <section> #current-color backgroundColor to #pallete .color clicked
-
-// event lister on every cell.  
+}  
 
 let currentColor = document.querySelector("#current-color");// choosing the current color block
-// console.log(currentColor.style.backgroundColor);
-
 
 let selectColor = document.querySelectorAll( ".color");// chosing the .color values in #palette
-//console.log(selectColor); Trying to console log here but nothing is working **
 
 for(let color of selectColor){// looping throgh all .color values
   color.addEventListener("click", (c)=>{// for each value , when I click 
@@ -29,12 +17,15 @@ for(let color of selectColor){// looping throgh all .color values
 }
 
 
-let cells = document.querySelectorAll(".cell");// grab every cell
+let cells = document.querySelectorAll(".cell");// select every cell
 
-for (let cell of cells){// add event listener to each 
-  cell.addEventListener("mousedown", (box)=>{// need to find something better than mousedown
-    box.target.style.backgroundColor = currentColor.style.backgroundColor;// so when a box, .cell , is clicked, its overridden to current color
+for (let cell of cells){
+  cell.addEventListener("mousedown", (box)=>{// add event listener to each 
+    box.target.style.backgroundColor = currentColor.style.backgroundColor;// so when cell is clicked, it is overridden to current color
   });
 }
-//e.target.style.backgroundColor
-// why is style = "background"in html different than css style.backgroundColor
+let clear = document.querySelector("button")
+  clear.addEventListener("click", ()=>{
+    currentColor.style.backgroundColor = "white";
+    cells.forEach(cell=> cell.style.backgroundColor= "#3f427c");
+})
