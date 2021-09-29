@@ -7,17 +7,35 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
-// change header text
+/* change header text */
 let headerText = document.querySelector("header h1");
 headerText.textContent = "Christina's Pixel Painter";
-headerText.setAttribute("style", "margin: 0 0 50px; padding: 25px; color:#7e7f9a; background:hotpink; text-align:center; ")
+headerText.setAttribute("style", "margin: 0 0 50px; padding: 25px; color:#7e7f9a; background:hotpink; text-align:center;")
 
 /* add a NEW color to palette */
+// random color generator - from `https://css-tricks.com/randomcolor/`
+let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
 let onPalette = document.querySelector("#palette");
-let hotpink = document.createElement("div");
-hotpink.setAttribute("class", "color");
-hotpink.setAttribute("style", "background: hotpink;")
-onPalette.append(hotpink);
+// fieldset adds text to border
+let mysteryColor = document.createElement("fieldset");
+let mysteryColorText = document.createElement("legend");
+mysteryColorText.textContent = "🔄";
+
+mysteryColor.setAttribute("class", "color");
+mysteryColor.style.backgroundColor = randomColor;
+mysteryColor.style.height = "60px";
+
+onPalette.append(mysteryColor);
+mysteryColor.append(mysteryColorText);
+
+// Random color changes when clicking text button
+mysteryColorText.addEventListener("click", ()=>{
+  let newRandomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  mysteryColorText.style.backgroundColor = newRandomColor;
+  mysteryColor.style.backgroundColor = newRandomColor;
+});
+
+
 
 // select all colors
 let colors = document.querySelectorAll("#palette .color");
@@ -107,7 +125,7 @@ MAKE BUTTON #1 - Clears all colors from canvas
 let clearButton = document.createElement('div');
 // set attributes to element
 clearButton.setAttribute("class", "clear-button");
-clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px; border-radius:8px;");
+clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px; border-radius:8px; padding:2px;");
 clearButton.textContent = "Clear The Canvas";
 
 // add to body
@@ -128,7 +146,7 @@ MAKE BUTTON #2 - Makes canvas all Current Color
 let oneColor = document.createElement('div');
 // set attributes to element
 oneColor.setAttribute("class", "one-button");
-oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: 10px; margin-right: 10px; margin-bottom:20px; width:150px; border-radius:8px;");
+oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: 10px; margin-right: 10px; margin-bottom:20px; width:150px; border-radius:8px; padding:2px;");
 oneColor.textContent =
 `One Color Canvas`;
 
@@ -149,7 +167,7 @@ MAKE BUTTON #3 - Change to dark mode
 let darkMode = document.createElement('div');
 // set attributes to element
 // darkMode.setAttribute("class", "darkness");
-darkMode.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px; border-radius:8px;");
+darkMode.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px; border-radius:8px; padding:2px;");
 darkMode.textContent = "Dark/Light";
 
 // for dark mode
@@ -164,18 +182,6 @@ function myFunction() {
   // dark mode
   element.classList.toggle("dark-mode");
 }
-
-
-// .dark-mode {
-//   background-color: black;
-//   color: white;
-// }
-
-// darkMode.addEventListener("click", ()=>{
-  // body.style.backgroundColor = "black";
-  // body.style.color = "pink";
-// })
-
 
 // change cursor on canvas
 let onCanvas = document.querySelector("#canvas");
@@ -204,12 +210,13 @@ current.addEventListener("click", ()=>{
 let backToTop = document.createElement("div");
 backToTop.textContent = "Back to Top";
 palette.append(backToTop);
-backToTop.setAttribute("style", "text-align:center; display:inline-block; border:2px solid black; padding:2px; width:200px; border-radius:10px;")
+backToTop.setAttribute("style", "text-align:center; display:block; margin-left:auto; margin-right:auto; border:2px solid black; padding:4px; width:100px; border-radius:10px;")
+// scrolls to top on click event
 backToTop.addEventListener("click", ()=>{
   current.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
+// back to top button - with current color
 backToTop.addEventListener("mouseover", ()=>{
-  // current color to back to top button - with current color
   backToTop.style.backgroundColor = current.style.backgroundColor;
 });
 
