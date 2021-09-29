@@ -31,6 +31,17 @@ cellblocks.forEach((onecell) => {
   });
 });
 
+// fillButton.addEventListener('click', function(e) {
+//   state.fillColor = state.color;
+//   this.style.color = state.color;
+//   styleChildren(grid, {backgroundColor: state.color});
+// });
+
+// eraseButton.addEventListener('click', function(ev) {
+//   state.color = state.fillColor;
+//   colorPicker.value = state.color;
+// });
+
 // We still do not understand but Stephanie GoogledFoo'd and found
 // https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 // As the main reference.
