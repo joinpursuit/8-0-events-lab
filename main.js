@@ -7,3 +7,22 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+// code above creating the grid 
+
+
+let divs = document.querySelectorAll(".color");
+
+let selectColor = document.querySelector("#current-color");
+  for(let div of divs) { 
+    div.addEventListener("click", (event) => {
+      selectColor.style.backgroundColor = event.target.style.backgroundColor;
+    });
+  }
+
+  let cells = document.querySelectorAll(".cell");
+
+  for(let cell of cells) {
+    cell.addEventListener("click", (element) => {
+      element.target.style.backgroundColor = selectColor.style.backgroundColor;
+    });
+  }
