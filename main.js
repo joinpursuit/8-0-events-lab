@@ -7,14 +7,23 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+// change header text
+let headerText = document.querySelector("header h1");
+headerText.textContent = "Christina's Pixel Painter";
+headerText.setAttribute("style", "margin: 0 0 50px; padding: 25px; color:#7e7f9a; background:hotpink; text-align:center; ")
+
+/* add a NEW color to palette */
+let onPalette = document.querySelector("#palette");
+let hotpink = document.createElement("div");
+hotpink.setAttribute("class", "color");
+hotpink.setAttribute("style", "background: hotpink;")
+onPalette.append(hotpink);
+
 // select all colors
 let colors = document.querySelectorAll("#palette .color");
-// console.log(colors);
 
 // select the current color
 let current = document.getElementById('current-color');
-// current.setAttribute("style", "background: null");
-// console.log(current);
 
 for (let color of colors) {
   color.addEventListener("click", (e) => {
@@ -98,7 +107,7 @@ MAKE BUTTON #1 - Clears all colors from canvas
 let clearButton = document.createElement('div');
 // set attributes to element
 clearButton.setAttribute("class", "clear-button");
-clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
+clearButton.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px; border-radius:8px;");
 clearButton.textContent = "Clear The Canvas";
 
 // add to body
@@ -119,7 +128,7 @@ MAKE BUTTON #2 - Makes canvas all Current Color
 let oneColor = document.createElement('div');
 // set attributes to element
 oneColor.setAttribute("class", "one-button");
-oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px;");
+oneColor.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: 10px; margin-right: 10px; margin-bottom:20px; width:150px; border-radius:8px;");
 oneColor.textContent =
 `One Color Canvas`;
 
@@ -140,11 +149,8 @@ MAKE BUTTON #3 - Change to dark mode
 let darkMode = document.createElement('div');
 // set attributes to element
 // darkMode.setAttribute("class", "darkness");
-darkMode.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px");
+darkMode.setAttribute("style", "text-align:center; color: white; background-color: #7e7f9a; border: 3px double white; display:inline-block; margin-left: auto; margin-right: auto; margin-bottom:20px; width:150px; border-radius:8px;");
 darkMode.textContent = "Dark/Light";
-
-// let body = document.querySelector("body");
-// body.setAttribute("style", "color:red; backgroundColor:pink;");
 
 // for dark mode
 darkMode.setAttribute("onclick", "myFunction()");
@@ -157,14 +163,6 @@ function myFunction() {
   var element = document.body;
   // dark mode
   element.classList.toggle("dark-mode");
-  let darkCss = document.querySelector(".dark-mode");
-  darkCss.style.backgroundColor = "black";
-  darkCss.style.color = "white";
-  // light mode
-  element.classList.toggle("light-mode");
-  let lightCss = document.querySelector(".light-mode");
-  lightCss.style.backgroundColor = "#def";
-  lightCss.style.color = "violet";
 }
 
 
@@ -183,14 +181,13 @@ function myFunction() {
 let onCanvas = document.querySelector("#canvas");
 onCanvas.setAttribute("style", "cursor: crosshair");
 
-// change cursor on color palette
-let onColors = document.querySelector("#palette");
-onColors.setAttribute("style", "cursor: url('./assets/butterfly.png'),auto;");
+// change cursor on color palette `onPalette`
+onPalette.setAttribute("style", "cursor: url('./assets/butterfly.png'),auto;");
 
 
 // move current under palette
 let header = document.querySelector("header");
-onColors.after(current);
+onPalette.after(current);
 
 // add current color to side of page
 directions.append(current);
@@ -207,9 +204,13 @@ current.addEventListener("click", ()=>{
 let backToTop = document.createElement("div");
 backToTop.textContent = "Back to Top";
 palette.append(backToTop);
-backToTop.setAttribute("style", "text-align:center; display:inline-block; border:2px solid black; padding:2px; width:200px;")
+backToTop.setAttribute("style", "text-align:center; display:inline-block; border:2px solid black; padding:2px; width:200px; border-radius:10px;")
 backToTop.addEventListener("click", ()=>{
   current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+backToTop.addEventListener("mouseover", ()=>{
+  // current color to back to top button - with current color
+  backToTop.style.backgroundColor = current.style.backgroundColor;
 });
 
 // spacer under back to top button
