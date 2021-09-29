@@ -19,20 +19,21 @@ let onPalette = document.querySelector("#palette");
 // fieldset adds text to border
 let mysteryColor = document.createElement("fieldset");
 let mysteryColorText = document.createElement("legend");
-mysteryColorText.textContent = "🔄";
+// mysteryColorText.textContent = "🔄";
 
 mysteryColor.setAttribute("class", "color");
 mysteryColor.style.backgroundColor = randomColor;
-mysteryColor.style.height = "77px";
-mysteryColorText.style.paddingBottom = "30px";
+// mysteryColor.style.height = "77px";
+// mysteryColorText.style.paddingBottom = "30px";
+// mysteryColorText.style.border = "1px solid solid none solid black";
 
 onPalette.append(mysteryColor);
-mysteryColor.append(mysteryColorText);
+// mysteryColor.append(mysteryColorText);
 
 // Random color changes when clicking text button
-mysteryColorText.addEventListener("click", ()=>{
+mysteryColor.addEventListener("click", ()=>{
   let newRandomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-  mysteryColorText.style.backgroundColor = newRandomColor;
+  // mysteryColorText.style.backgroundColor = newRandomColor;
   mysteryColor.style.backgroundColor = newRandomColor;
 });
 
