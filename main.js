@@ -10,7 +10,7 @@ for (let i = 0; i < 100; i++) {
 /* change header text */
 let headerText = document.querySelector("header h1");
 headerText.textContent = "Christina's Pixel Painter";
-headerText.setAttribute("style", "margin: 0 0 50px; padding: 25px; color:#7e7f9a; background:hotpink; text-align:center;")
+headerText.setAttribute("style", "margin: 0 0 50px; padding: 25px; color:#7e7f9a; background-color:#c6c6cc; border:6px dotted #7e7f9a; text-align:center;")
 
 /* add a NEW color to palette */
 // random color generator - from `https://css-tricks.com/randomcolor/`
@@ -23,7 +23,7 @@ mysteryColorText.textContent = "🔄";
 
 mysteryColor.setAttribute("class", "color");
 mysteryColor.style.backgroundColor = randomColor;
-mysteryColor.style.height = "60px";
+mysteryColor.style.height = "63px";
 
 onPalette.append(mysteryColor);
 mysteryColor.append(mysteryColorText);
