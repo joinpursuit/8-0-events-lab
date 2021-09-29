@@ -20,9 +20,13 @@ header {
   color: white;
 }
 
-header h1 {
+header h1{
+  text-align-last: center;
   margin: 0 0 50px;
   padding: 25px;
+  font-size: 100px;
+  color: pink;
+  
 }
 
 #canvas {
@@ -66,4 +70,15 @@ header h1 {
   margin: 10px;
   height: 50px;
   width: 50px;
+}
+
+.erase {
+  background-color: red;
+  border: black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
