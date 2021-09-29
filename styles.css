@@ -23,6 +23,7 @@ header {
 header h1 {
   margin: 0 0 50px;
   padding: 25px;
+  text-align: center;
 }
 
 #canvas {
@@ -43,12 +44,41 @@ header h1 {
   width: 50px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  text-align: center;
+}
+
 #current-color {
   border: 2px solid #393e41;
-  display: block;
+  display: inline-block;
   height: 50px;
-  margin: 25px auto;
+  margin: 15px;
   width: 50px;
+}
+
+#smileBtn {
+  border: 2px solid #393e41;
+  display: inline;
+  height: 50px;
+  margin: 15px;
+  width: 50px;
+  background-color: papayawhip;
+  border-radius: 25%;
+  color: chocolate;
+}
+
+#reset {
+  border: 2px solid #393e41;
+  display: inline;
+  height: 50px;
+  margin: 15px;
+  width: 50px;
+  background-color: papayawhip;
+  border-radius: 25%;
+  color: forestgreen;
 }
 
 #palette {
