@@ -4,6 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 h1,
@@ -16,13 +17,14 @@ h6 {
 }
 
 header {
-  background: #7e7f9a;
+  background: turquoise;
+  font-size: 3em;
   color: white;
 }
 
 header h1 {
   margin: 0 0 50px;
-  padding: 25px;
+  padding: 10px;
 }
 
 #canvas {
@@ -41,6 +43,7 @@ header h1 {
   margin: 0;
   height: 50px;
   width: 50px;
+  cursor: crosshair;
 }
 
 #current-color {
@@ -56,6 +59,7 @@ header h1 {
   margin: 25px auto;
   text-align: center;
   width: 80%;
+  cursor: grab;
 }
 
 #palette .color {
@@ -66,4 +70,16 @@ header h1 {
   margin: 10px;
   height: 50px;
   width: 50px;
+}
+
+button {
+  cursor: progress;
+  width: 180px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+button:hover {
+  font-size: large;
+  transform: scale(1.1);
 }
