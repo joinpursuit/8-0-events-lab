@@ -23,7 +23,8 @@ mysteryColorText.textContent = "🔄";
 
 mysteryColor.setAttribute("class", "color");
 mysteryColor.style.backgroundColor = randomColor;
-mysteryColor.style.height = "63px";
+mysteryColor.style.height = "77px";
+mysteryColorText.style.paddingBottom = "30px";
 
 onPalette.append(mysteryColor);
 mysteryColor.append(mysteryColorText);
