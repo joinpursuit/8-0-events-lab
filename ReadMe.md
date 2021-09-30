@@ -1,0 +1,1 @@
+ On this canvas, an extra color was added to the palette and also a dark mode feature. I am still working on the relationship between the math here to remove the gaps between the columns. Still, I am very proud to have partnered with Isidro Molina on this.  
