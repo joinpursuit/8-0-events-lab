@@ -18,7 +18,7 @@ for (const color of colors) {
 
 const cells = document.getElementsByClassName("cell");
 for (const cell of cells) {
-  cell.addEventListener("click", (event) => {
+  cell.addEventListener("mousedown", (event) => {
     event.target.style.backgroundColor = current.style.backgroundColor;
   });
 }
