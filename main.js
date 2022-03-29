@@ -51,3 +51,12 @@ button2.addEventListener("click", () => {
       document.querySelector("#current-color").style.backgroundColor;
   });
 });
+
+// Change the event listener so that instead of clicking to fill a color, you hold down your mouse.
+cells.forEach((cell) => {
+  cell.addEventListener("mousedown", () => {
+    const color =
+      document.querySelector("#current-color").style.backgroundColor;
+    cell.style.backgroundColor = color;
+  });
+});
