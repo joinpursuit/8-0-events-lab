@@ -9,26 +9,18 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
-const current = document.querySelector('#current-color');
-
-const color = document.querySelector('.color');
-
-const cells = document.querySelectorAll('.cell');
+const colors = document.querySelectorAll('.color');
+const currentColor = document.querySelector('#current-color');
 
 for (let color of colors) {
-	color.addEventListener('click', (event) => {
-		current.style.backgroundColor = event.target.style.backgroundColor;
+	color.addEventListener('click', () => {
+		currentColor.style.backgroundColor = color.style.backgroundColor;
 	});
 }
 
+const cells = document.querySelectorAll('.cell');
 for (let cell of cells) {
-	cell.addEventListener('click', (event) => {
-		event.target.style.backgroundColor = current.style.background;
-	});
-
-	const button = document.querySelector('button');
-	button.addEventListener('click', () => {
-		current.style.backgroundColor = 'white';
-		cells.forEach((cell) => (cell.style.backgroundColor = '#3f427c'));
+	cell.addEventListener('click', () => {
+		cell.style.backgroundColor = currentColor.style.backgroundColor;
 	});
 }
