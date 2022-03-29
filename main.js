@@ -7,3 +7,18 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+const current = document.getElementById("current-color");
+const colors = document.getElementsByClassName("color");
+
+for (const color of colors) {
+  color.addEventListener("click", (event) => {
+    current.style.backgroundColor = event.target.style.backgroundColor;
+  });
+}
+
+const cells = document.getElementsByClassName("cell");
+for (const cell of cells) {
+  cell.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = current.style.backgroundColor;
+  });
+}
