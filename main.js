@@ -38,3 +38,16 @@ button.addEventListener("click", () => {
     cell.style.backgroundColor = "white";
   });
 });
+
+// Create a button that, when clicked, changes all of the cells so that they match the #current-color element's background.
+let button2 = document.createElement("button");
+button2.textContent = "cells to current color";
+document.querySelector("#palette").after(button2);
+
+button2.addEventListener("click", () => {
+  let cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.style.backgroundColor =
+      document.querySelector("#current-color").style.backgroundColor;
+  });
+});
