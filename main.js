@@ -26,3 +26,15 @@ cells.forEach((cell) => {
     cell.style.backgroundColor = color;
   });
 });
+
+// Create a button that, when clicked, resets all cells so that they all have a background of white.
+let button = document.createElement("button");
+button.textContent = "Reset";
+document.querySelector("#palette").append(button);
+
+button.addEventListener("click", () => {
+  let cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = "white";
+  });
+});
