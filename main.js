@@ -11,10 +11,12 @@ for (let i = 0; i < 100; i++) {
 const currentColor = document.getElementById("current-color");
 const colorPalette = document.getElementsByClassName("color");
 const reset = document.getElementById("reset");
+const fill = document.getElementById("fill");
 
 for (let color of colorPalette) {
   color.addEventListener("click", () => {
     currentColor.style.background = color.style.background;
+    fill.style.background = color.style.background;
   });
 }
 
@@ -29,5 +31,11 @@ for (let cell of cells) {
 reset.addEventListener("click", () => {
   for (let cell of cells) {
     cell.style.background = reset.style.background;
+  }
+});
+
+fill.addEventListener("click", () => {
+  for (let cell of cells) {
+    cell.style.background = currentColor.style.background;
   }
 });
