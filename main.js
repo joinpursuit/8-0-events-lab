@@ -17,10 +17,10 @@ for (let color of colors) {
 	});
 }
 
-//change cell on click
+//change cell on mousedown
 const colorCells = document.querySelectorAll(".cell");
 for (let cell of colorCells) {
-	cell.addEventListener("click", (event) => {
+	cell.addEventListener("mousedown", (event) => {
 		cell.setAttribute("style", `background-color: ${currentColor.style.backgroundColor}`);
 	});
 }
