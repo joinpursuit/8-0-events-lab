@@ -24,3 +24,14 @@ for (let cell of colorCells) {
 		cell.setAttribute("style", `background-color: ${currentColor.style.backgroundColor}`);
 	});
 }
+
+//fill page with one color
+const fill = document.createElement("button");
+fill.textContent = "FILL PAGE";
+fill.setAttribute("style", "text-align: center");
+document.querySelector("body").append(fill);
+fill.addEventListener("click", (event) => {
+	colorCells.forEach((cell) => {
+		cell.style.backgroundColor = `${currentColor.style.backgroundColor}`;
+	});
+});
