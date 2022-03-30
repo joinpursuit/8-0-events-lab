@@ -7,3 +7,8 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+let paletteColor = document.getElementById('palette');
+	paletteColor.addEventListener('click', (e) => {
+	let currentColor = document.getElementById('current-color')
+	currentColor += paletteColor
+  })
