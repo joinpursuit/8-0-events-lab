@@ -8,7 +8,6 @@ for (let i = 0; i < 100; i++) {
 }
 // You may write your code here!
 
-
 //Passed all lab tests:
 let currentColor = document.getElementById('current-color');
 let colors = document.getElementsByClassName('color');
@@ -26,3 +25,15 @@ for (let cell of cells) {
   });
 }
 
+//Additional features:
+for (let color of colors) {
+  color.addEventListener('mousedown', (event) => {
+    currentColor.style.background = event.target.style.background;
+  });
+}
+
+for (let cell of cells) {
+  cell.addEventListener('mouseover', (event) => {
+    event.target.style.background = currentColor.style.background;
+  });
+}
