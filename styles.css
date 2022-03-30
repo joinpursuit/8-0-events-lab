@@ -51,6 +51,15 @@ header h1 {
   width: 50px;
 }
 
+#reset {
+  border: 2px solid #393e41;
+  display: block;
+  height: 50px;
+  margin: 25px auto;
+  width: 50px;
+  text-align: center;
+}
+
 #palette {
   height: 50px;
   margin: 25px auto;

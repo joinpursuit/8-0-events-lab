@@ -10,7 +10,7 @@ for (let i = 0; i < 100; i++) {
 
 const currentColor = document.getElementById("current-color");
 const colorPalette = document.getElementsByClassName("color");
-console.log(colorPalette);
+const reset = document.getElementById("reset");
 
 for (let color of colorPalette) {
   color.addEventListener("click", () => {
@@ -25,3 +25,9 @@ for (let cell of cells) {
     cell.style.background = currentColor.style.background;
   });
 }
+
+reset.addEventListener("click", () => {
+  for (let cell of cells) {
+    cell.style.background = reset.style.background;
+  }
+});
