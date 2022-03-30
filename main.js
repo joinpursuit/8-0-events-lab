@@ -10,12 +10,12 @@ for (let i = 0; i < 100; i++) {
 const colors = document.querySelectorAll('#palette .color')
 const current = document.querySelector('#current-color');
 current.setAttribute(`style`, `background: #FFF`)
-// const cells = document.querySelectorAll('#canvas .cell')
-// for(let cell of cells){
-//   cell.addEventListener('click', () => {
-//     cell.setAttribute(`style`, `background: ${current.style.backgroundColor}`)
-//   })
-// }
+const cells = document.querySelectorAll('#canvas .cell')
+for(let cell of cells){
+  cell.addEventListener('click', () => {
+    cell.setAttribute(`style`, `background: ${current.style.backgroundColor}`)
+  })
+}
 for(let color of colors){
   color.addEventListener('click', () => {
     current.setAttribute(`style`, `background: ${color.style.backgroundColor}`)
