@@ -7,17 +7,22 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
-const palette = document.querySelectorAll("#palette");
+
+const palettes = document.querySelectorAll("#palette .color");
 const currentColor = document.querySelector("#current-color");
-palette.forEach(palettes => {
-  palettes.addEventListener("click" , (event) => {
-    event.target.style.background = currentColor.style.background
+palettes.forEach(palette => {
+  palette.addEventListener("click" , (event) => {
+    // event.target.style.background = currentColor.style.background
+    // const currentColor = event.target.parentNode.querySelector("#current-color")
+
+    currentColor.style.background = palette.style.background
   })
 });
 
-const cell = document.querySelectorAll(".cell");
-cell.forEach(cells => {
-  cells.addEventListener("click", (event) => {
+const cells = document.querySelectorAll(".cell");
+cells.forEach(cell => {
+  cell.addEventListener("click", (event) => {
     event.target.style.background = currentColor.style.background
+    // const currentColor = event.target.parentNode.querySelector("#current-color")
   })
 });
