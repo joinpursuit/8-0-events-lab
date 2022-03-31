@@ -9,13 +9,13 @@ for (let i = 0; i < 100; i++) {
 // You may write your code here
 const myPallete = document.querySelectorAll('.color');
 myPallete.forEach(color => {
-  color.addEventListener("click", (event) => {
+  color.addEventListener('click', () => {
     const activeColor = color.getAttribute('style');
     const current = document.querySelector("#current-color");
     current.setAttribute('style', activeColor);
     const myCell = document.querySelectorAll('.cell');
     myCell.forEach(cell => {
-      cell.addEventListener("click", (event) => {
+      cell.addEventListener('click', () => {
         cell.setAttribute('style', activeColor);
       });
     });
