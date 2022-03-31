@@ -7,3 +7,23 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+const divs = document.querySelectorAll(".color");
+const currentColor = document.querySelector("#current-color");
+for (let div of divs) {
+  div.addEventListener("click", (event) => {
+    currentColor.style.backgroundColor = event.target.style.backgroundColor
+  });
+}
+
+const cells = document.querySelectorAll(".cell")
+for (let cell of cells) {
+  cell.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = currentColor.style.backgroundColor
+  })
+}
+
+
+const resetRefresh = document.querySelector("input")
+resetRefresh.addEventListener("click", (event) => {
+  window.location.reload("Refresh")
+});
