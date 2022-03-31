@@ -27,6 +27,25 @@ cell.forEach(box => {
     console.log(box);
     box.style.background = currentColor.style.background;
   })
+});
+
+// Clear button Set-up: 
+
+const button = document.createElement("button");
+button.textContent = "Clear Here";
+const body = document.querySelector("body");
+body.append(button);
+
+// Clear button function:
+button.addEventListener("click", (event) => {
+  cell.forEach(box => {
+    box.style.background = "";
+  })
 })
 
-// cell.background = currentColor.style.background;
+
+
+
+
+
+
