@@ -25,6 +25,10 @@ header h1 {
   padding: 25px;
 }
 
+#theButton {
+  text-align: center;
+}
+
 #canvas {
   border: 3px solid #393e41;
   display: grid;
