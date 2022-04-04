@@ -67,3 +67,27 @@ header h1 {
   height: 50px;
   width: 50px;
 }
+
+
+.btn-pink{
+  color: #d1d1d1;
+  background-color: #E03B8B;
+  margin-top: 50px;
+  margin-right: 10px;
+  bottom: 0;
+  right:0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border:1px solid #E03B8B
+}
+
+.btn-yellow{
+  color: #000;
+  background-color: #F7CD2E;
+  margin-top: 50px;
+  bottom: 0;
+  right:0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border:1px solid #F7CD2E;
+}

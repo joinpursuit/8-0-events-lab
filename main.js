@@ -18,9 +18,9 @@ const palette = document.querySelectorAll("#palette .color");
 palette.forEach(color => {
 
   // when a color is "clicked" something EVENT will happen
-  color.addEventListener("click", (event) =>{
+  color.addEventListener("mouseover", (event) =>{
     
-    // the current color style background will change to the color styl background selected with the "click"
+    // the current color style background will change to the color style background selected with the "click"
     currentColor.style.background = color.style.background
 
   });
@@ -28,13 +28,13 @@ palette.forEach(color => {
 
 
 // create a variable divCell and give it value of - use the document.querySelector to pick ALL the class element cell nodes from the nodelist 
-const divCell = document.querySelectorAll(".cell");
+var divCell = document.querySelectorAll(".cell");
 
 //  iterate through the nodelist of cells
 divCell.forEach(cell => {
 
   // when a cell is "clicked" something EVENT will happen
-  cell.addEventListener("click", (event) =>{
+  cell.addEventListener("mouseover", (event) =>{
 
     // the cell color style background will change to the current color style background selected with the "click"
     cell.style.backgroundColor = currentColor.style.background
@@ -42,6 +42,18 @@ divCell.forEach(cell => {
   });
 })
 
+function colorAll(){
+  divCell.forEach(cell => {
+      cell.style.backgroundColor = currentColor.style.background
+  
+    });
+
+}
+
+
+
+
 function refreshPage(){
   window.location.reload();
 }
+

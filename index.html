@@ -15,16 +15,22 @@
     <main id="canvas"></main>
     <section id="current-color"></section>
     <section id="palette">
+
+      <div class="color" style="background: greenyellow"></div>
+      <div class="color" style="background: darkcyan"></div>
+      <div class="color" style="background: darkorange"></div>
       <div class="color" style="background: black"></div>
       <div class="color" style="background: red"></div>
-      <div class="color" style="background: orange"></div>
+      <div class="color" style="background: pink"></div>
       <div class="color" style="background: yellow"></div>
       <div class="color" style="background: green"></div>
       <div class="color" style="background: blue"></div>
       <div class="color" style="background: purple"></div>
       <div class="color" style="background: white"></div>
 
-      <button>type="submit" onClick="refreshPage()"</button>
+      <!-- <button type="submit" onClick="refreshPage()" value="reset" </button> -->
+      <button class="btn-pink" type="submit" onclick="refreshPage()" value="reset">Reset</button>
+      <button class="btn-yellow"  type="submit" onclick="colorAll()" >ColorAll</button>
     </section>
   </body>
 </html>
